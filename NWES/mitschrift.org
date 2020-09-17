@@ -3,7 +3,7 @@
 
   verschiedene Busse haben verschiedene Anforderungen bezüglich Distanz und Übertragungsgeschwindigkeit. Grundsätzlich: je kürzer die Distanz, desdo schneller
 
-[[/home/felixp/Schule/OfficeLense/2020_09_17 16_27 Office Lens.jpg][I²C Bus]]
+[[./../OfficeLense/2020_09_17 16_27 Office Lens.jpg][I²C Bus]]
 
 2 Arten der Übertragung:
 + Paralell:
@@ -38,7 +38,7 @@
      Vorteil: die Kommunikation in einem untersystem blockiert die Kommunikation in einem anderen Untersystem nicht.
      
 **** Sterntopologie:
-     [[/home/felixp/Schule/OfficeLense/2020_09_17 17_34 Office Lens (2).jpg][Stern-Bus]]
+     [[/home/felixp/Schule/OfficeLense/2020_09_17 17_34 Office Lens (2).jpg][Stern-Bus]
      Nachteil: Peripheriegeräte können nur über Zentralgerät kommunizieren, was oft aber gar nicht nötig ist.
      Beispiel: PC als Zentralknoten, Maus, Tastatur, etc als Peripheriegeräte (duh)
 
