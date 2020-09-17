@@ -1,0 +1,54 @@
+millis() : zeitgesteuerte abl�ufe programmieren
+
+      Wartezeit
+---|-----------|-------> t
+Ereignis     Aktion
+
+long int startzeit = MAX_LONG_INT;
+if(ereignis){
+    startzeit = millis();
+} else if (millis() >= startzeit + wartezeit){
+    aktion
+    startzeit = MAX_LONG_INT;
+}
+
+wenn Aktion = Ereignis:
+
+if(millis() >= startzeit + wartezeit){
+    aktion
+    startzeit = millis();
+}
+
+# interrupts
+interrupts erlauben eine sehr rasche reaktion auf bestimmte ereignisse
+
+programmausf�hrung springt in die interrupt service routine (ISR)
+nach abarbeiten der ISR erfolgt ein r�cksprung in die loop, an die stelle, an
+der sie unterbrochen wurde, unter umst�nden auch mitten in einem befehl
+
+vorteil: ISR kann durch andere befehle in der loop nicht verz�gert werden,
+umgekehrt kann die ISR aber die loop verz�gern. -> ISR soll so programmiert werden,
+dass diese verz�gerung m�glichst gering ist. (keine zeitaufw�ndigen befehle in der ISR)
+
+attachInterupt(0/1, Name der ISR, RISING/FALLING/CHANGE);
+
+ab diesem befehl l��t eine flanke am entsprechenden digitalpin die ausf�hrung der ISR aus
+
+detachInterupt([wie oben])
+
+bsp:
+schalter prellen
+
+schreib ein arduino programm, das die anzahl der flanken an pin2 z�hlt und �ber serial ausgibt
+
+setup:
+    attachInterrupt(0, ISR_Taste, CHANGE,)
+    Serial.begin(9600);
+    int zaehler;
+
+void ISR_Taste(){
+    zaehler++;
+}
+
+loop:
+    Serial.println(zaehler);

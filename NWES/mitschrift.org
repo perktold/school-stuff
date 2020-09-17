@@ -1,0 +1,45 @@
+* Bus systeme
+  Dienen zum Datenaustausch zwischen verschiedenen Geräten oder zwischen verschiedenen Komponenten des selben Geräts.
+
+  verschiedene Busse haben verschiedene Anforderungen bezüglich Distanz und Übertragungsgeschwindigkeit. Grundsätzlich: je kürzer die Distanz, desdo schneller
+
+[[/home/felixp/Schule/OfficeLense/2020_09_17 16_27 Office Lens.jpg][I²C Bus]]
+
+2 Arten der Übertragung:
++ Paralell:
+  + mehrere zusammengehörige bits werden gleichzeitig auf mehreren Leitungen übertragen
+  + schnell aber hoher Hardwareaufwand -> nur über relativ kurze Distanzen, zb innerhalb eines PC
++ seriell:
+  + bits werden hintereinander (seriell) auf einer Leitung geschickt
+  + langsam, niedrigerer Hardwareaufwand
+
+** Prinzipien, die für alle Bus-Systeme gelten:
+
+*** Topologie:
+    beschreibt, wie die einzelnen Geräte, die am Bus-System hängen, verbunden sind.
+
+**** Peer-to-Peer (zb UART):
+     [[/home/felixp/Schule/OfficeLense/2020_09_17 16_55 Office Lens (1).jpg][Peer-to-Peer Bus]]
+     Nachteil: nur zwei Teilnehmer
+     Vorteil: keine Addressierung nötig
+     (zb serial beim Arduino
+
+**** Linientopologien (zb CAN-Bus):
+     [[/home/felixp/Schule/OfficeLense/2020_09_17 16_55 Office Lens (2).jpg][CAN-Bus]]
+     einfachste Möglichkeit Geräte zu verbinden, so dass jeder mit jedem Kommunizieren kann
+     Nachteil: unterbrechung an einer Stelle führt zu Kommunikationsunterbrechung -> Umbauen des Systems im laufenden Betrieb nicht möglich
+
+**** Ringtopologie:
+     [[/home/felixp/Schule/OfficeLense/2020_09_17 17_11 Office Lens.jpg][Ring-Bus]]
+     Vorteil: Umbauen des Systems im laufenden Betriebs möglich
+
+**** Baumtopologie:
+     [[/home/felixp/Schule/OfficeLense/2020_09_17 17_34 Office Lens (1).jpg][Baum-Bus]]
+     Vorteil: die Kommunikation in einem untersystem blockiert die Kommunikation in einem anderen Untersystem nicht.
+     
+**** Sterntopologie:
+     [[/home/felixp/Schule/OfficeLense/2020_09_17 17_34 Office Lens (2).jpg][Stern-Bus]]
+     Nachteil: Peripheriegeräte können nur über Zentralgerät kommunizieren, was oft aber gar nicht nötig ist.
+     Beispiel: PC als Zentralknoten, Maus, Tastatur, etc als Peripheriegeräte (duh)
+
+     Nachteil bei Linien- und Ringtopologien: wenn ein Teilnehmer sendet, ist der Bus blockiert.
