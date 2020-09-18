@@ -1,0 +1,24 @@
+|-----------------------------------|
+| *Robotics - Digitale Technologie* |
+|-----------------------------------|
+
+*Robotertechnik*
+
+-> Roboter: VDI 6222 Blatt1
+
+"Mechatronische Bewegungssysteme, also Integrationsprodukte von Sensorik, Informationsverarbeitung und Akterik"
+
+[[/home/felixp/Schule/OfficeLense/Mechatronic.png][Mechatronik]]
+
++ Mechanik/Maschinenbau
++ Elektronik/Elektrotechnik
++ Informatik/Informationstechnik
+
+EVA-Prinzp: \\
+Eingabe -> Verarbeitung -> Ausgabe \\
+Sensorik -> Prozessorik -> Aktorik
+
+_Bsp Fensterputzroboter:_
+| Sensorik | Aktorik         |
+|----------+-----------------|
+|          | Antriebsmotoren |
