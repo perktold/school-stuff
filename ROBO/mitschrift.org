@@ -19,6 +19,13 @@ Eingabe -> Verarbeitung -> Ausgabe \\
 Sensorik -> Prozessorik -> Aktorik
 
 _Bsp Fensterputzroboter:_
-| Sensorik | Aktorik         |
-|----------+-----------------|
-|          | Antriebsmotoren |
+| Sensorik              | Aktorik              |
+|-----------------------+----------------------|
+| Taster, Schalter      | Antriebsmotoren      |
+| Reflexionslichtsensor | Düsen                |
+| Luftdrucksensor       | Piezo                |
+| Füllstandsensor       | Unterdruckventilator |
+| IR-Sensor             | Kontrolleuchten      |
+| Mikrofon              | Akustischer output   |
+| Beschleunugungssensor | Bluetooth, WLAN, etc |
+|                       |                      |
