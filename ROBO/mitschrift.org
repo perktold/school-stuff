@@ -8,7 +8,7 @@
 
 "Mechatronische Bewegungssysteme, also Integrationsprodukte von Sensorik, Informationsverarbeitung und Akterik"
 
-[[/home/felixp/Schule/OfficeLense/Mechatronic.png][Mechatronik]]
+[[../OfficeLense/Mechatronic.png][Mechatronik]]
 
 + Mechanik/Maschinenbau
 + Elektronik/Elektrotechnik
