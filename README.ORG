@@ -1,3 +1,3 @@
 * data
-schülercode huber: 85709
+schülercode huber: 85709 \\
 mailadresse office365: fperktold@office.htlinn.ac.at

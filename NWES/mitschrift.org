@@ -4,7 +4,6 @@
   verschiedene Busse haben verschiedene Anforderungen bezüglich Distanz und Übertragungsgeschwindigkeit. Grundsätzlich: je kürzer die Distanz, desdo schneller
 
 [[./../OfficeLense/2020_09_17 16_27 Office Lens.jpg][I²C Bus]]
-[[/home/felixp/Schule/OfficeLense/2020_09_17 17_49 Office Lens.jpg][test]]
 
 2 Arten der Übertragung:
 + Paralell:
