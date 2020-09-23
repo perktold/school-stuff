@@ -2,7 +2,7 @@
 | *Robotics - Digitale Technologie* |
 |-----------------------------------|
 
-*Robotertechnik*
+* *Robotertechnik*
 
 -> Roboter: VDI 6222 Blatt1
 
@@ -28,4 +28,35 @@ _Bsp Fensterputzroboter:_
 | IR-Sensor             | Kontrolleuchten      |
 | Mikrofon              | Akustischer output   |
 | Beschleunugungssensor | Bluetooth, WLAN, etc |
-|                       |                      |
+
+** Einteilung der Roboter:
+*** _nach Verwendungszweck_
++ Serviceroboter
++ Spielzeugroboter
++ Erkundungsroboter
++ Transportroboter
++ Militär- und Kampfroboter
++ Medizinische Roboter
+
+*** _nach Konstruktionsweise_
++ Stationäre Roboter
+  + zb Industrieroboter (IR)
++ Mobile / autonome Roboter
++ Humanoide Roboter
+
+* Industrieroboter
+nach VDI: 2860 //
+Industrieroboter sind universell einsetzbare Bewegungsautomaten mit mehreren Achsen, deren Bewegungen hinsichtlich Bewegungsfolge und -wegen/winkeln frei (das heißt ohne mechanischen Eingriff) programmierbar und gegebenenfalls sensorgeführt sind. Sie sind mit Greifern, Werkzeugen oder anderen Fertigungsmitteln ausrüstbar und können Handhabungs- und/oder Fertigungsaufgaben durchführen
+
+FK Metall S 554 (moodle)
+** Freiheitsgrade
+Körper im Raum hat 6 Freiheitsgrade:
+- 3x für Lage/Position
+- 3x für Orientierung (Drehung um die Achsen)
+
+Realisierung von Bewegungen:
+- Translation (T)
+- Rotation (R)
+
+Hauptachsen eines IR sind die ersten 3 Bewegungsachsen (f die Lage/Position) -> von RRR bis TTT alles möglich //
+Nebenachsen / Handachsen: -> nur RRR
