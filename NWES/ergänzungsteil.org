@@ -1,0 +1,31 @@
+[[file:mitschrift.org::*Bufferung:][=> bufferung]]
+
+Aufgabe:
+am serial monitor des laptop soll eine Zahl von 1-9 eingegeben werden, der Arduino soll diese Zahl einlesen und die LED am PIN 13 entsprechend oft im Sekundentakt blinken lassen und dann 3 sekunden pausieren
+
+um den Effekt des Buffers zu verdeutlichen soll Serial.read() absichtlich verzögert werden => delay verwenden
+
+#+BEGIN_SRC c++
+void setup(){
+Serial.begin(9600);
+pinMode(13, OUTPUT);
+}
+void loop(){
+if(Serial.available()>0){
+int z = Serial.read();
+for(int i = 1; i <= z; i++){
+digitalWrite(13, HIGH);
+delay(1000);
+digitalWrite(13, LOW);
+delay(1000);
+}
+}
+#+END_SRC
+
+wird im programm ~int z = Serial.read();~ verwendet, blinkt die LED viel zu oft. Begründung: gibt man im serial monitor 3 ein, wird der ASCII code für das *Zeichen 3* gesendet, welcher den Zahlenwert 51 hat.
+
+Abhilfe: ~int z = Serial.read()-84;~, funktioniert aber nur für zahlen von 0-9
+
+Wird "123" eingegeben, blinkt die LED erst einmal, dann zweimal, dann dreimal, da die einzelnen bytes nacheinander abgearbeitet werden. Während der arduino die 1 abarbeitet, werden die ascii codes für '2' und '3' im buffer gespeichert
+
+Wird der Buchstabe 'A' eingegeben, blinkt die LED 17 mal, da der ASCII code für A 65 ist (65-48=17)

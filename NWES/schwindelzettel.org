@@ -1,0 +1,8 @@
+Serial.available() //
+liefert die anzahl der verfügbaren bytes im buffer
+
+z = Serial.read() //
+liefert das nächste byte im Eingangsbuffer und löscht es aus dem BBuffer
+
+Serial.write(byte) //
+schreibt ein byte über Tx

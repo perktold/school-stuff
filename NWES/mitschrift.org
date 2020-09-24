@@ -1,7 +1,7 @@
 * Bus systeme
-  Dienen zum Datenaustausch zwischen verschiedenen Geräten oder zwischen verschiedenen Komponenten des selben Geräts.
+Dienen zum Datenaustausch zwischen verschiedenen Geräten oder zwischen verschiedenen Komponenten des selben Geräts.
 
-  verschiedene Busse haben verschiedene Anforderungen bezüglich Distanz und Übertragungsgeschwindigkeit. Grundsätzlich: je kürzer die Distanz, desdo schneller
+verschiedene Busse haben verschiedene Anforderungen bezüglich Distanz und Übertragungsgeschwindigkeit. Grundsätzlich: je kürzer die Distanz, desdo schneller
 
 [[./../OfficeLense/2020_09_17 16_27 Office Lens.jpg][I²C Bus]]
 
@@ -46,3 +46,29 @@
 
 **** Tassentopologie:
      [[../OfficeLense/2020_09_17 17_49 Office Lens.jpg][Tassen-Bus]]
+
+*** Master/Slave oder alle Geräte gleichberechtigt
+    Entweder ein Master-gerät steuert welches Gerät zu einem bestimmten Zeitpunkt senden darf, oder jedes der gleichberechtigten Geräte kann selbstständig zu senden beginnen
+
++ Master slave beispiel: I²C
++ alle Gleichberechtigt: CAN
+
+Bei gleichberechtigten Systemen benötigt der Bus ein Verfahren zur 
+
+*** Kollisionsvermeidung:
+Wenn mehrere Geräte zugleich zu senden beginnen, muss klar sein, welches Gerät Priorität hat. Die anderen Geräte müssen bemerken, dass ein Gerät mit höherer Priorität sendet und ihre Übertragung abbrechen
+
+Bei mehreren Geräten erhält jedes eine andere Adresse, diese Adresse wird mit den Daten mitgeschickt
+
+*** Bufferung:
+jedes Gerät benötigt einen Zwischenspeicher für empfangene Daten (=> Buffer), der vom Gerät ausgelesen wird, sobald es Zeit dazu hat
+
+*** Kollisionsvermeidung
+
+** RS232 / UART
+Universal Asynchronous Receive / Transmit
+
+[[../OfficeLense/2020_09_24 16_33 Office Lens.jpg][RS232]]
+
+| RX: | Recieve  |
+| Tx: | Transmit |
