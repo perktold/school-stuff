@@ -1,3 +1,5 @@
+#+HTML_HEAD: <link rel="stylesheet" type="text/css" href="style.css" />
+
 |-----------------------------------|
 | *Robotics - Digitale Technologie* |
 |-----------------------------------|
@@ -60,3 +62,15 @@ Realisierung von Bewegungen:
 
 Hauptachsen eines IR sind die ersten 3 Bewegungsachsen (f die Lage/Position) -> von RRR bis TTT alles möglich //
 Nebenachsen / Handachsen: -> nur RRR
+
+TTT: Portalroboter
+RRT: Scararoboter
+RRR: Knickarmroboter
+
+_Leistungmerkmale:_
++ Anzahl Achsen/Bauart
++ Arbeitsraum, Gefahrenbereich
++ Nennlast, max.Traglast
++ Geschwindigkeit
++ Wiederholgenauigkeit
++ Positioniergenauigkeit

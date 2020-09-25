@@ -1,0 +1,69 @@
+:root {
+    
+    --yellow:		#fd971f;
+    --darkyellow:	#b36b16;
+
+    --green:		#a6e22e;
+    --darkgreen:	#70991f;
+
+    --white:		#f8f8f2;
+    --black:		#000000;
+    --gray:		#727564;
+    --darkgray:		#272822;
+
+    --cyan:		#66d9ef;
+    --darkcyan:		#4694a3;
+    --blue:		#03b6fc;
+    --darkblue:		#0281b3;
+
+    --magenta:		#f92672;
+    --darkmagenta:	#b31b52;
+    --red:		#f9263f;
+    --darkred:		#b31b2d;
+}
+
+#welcome {
+    background: var(--magenta)
+    color: var(--gray);
+}
+
+html {
+    font-family: monospace;
+    font-size: 16.5px;
+}
+
+body {
+    background: var(--darkgray);
+    color: var(--white);
+    padding-left: 10%;
+    padding-right: 5%;
+}
+
+h1 {
+    text-align: center;
+    word-break: break-all;
+    color: var(--yellow);
+}
+
+h2 {
+    padding-left: 5%;
+}
+
+p {
+    line-height: 150%
+}
+
+a {
+    color: var(--blue);
+}
+
+a:hover {
+    color: var(--cyan);
+}
+
+img {
+    padding: 20px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
