@@ -44,9 +44,6 @@ verschiedene Busse haben verschiedene Anforderungen bezüglich Distanz und Über
 
      Nachteil bei Linien- und Ringtopologien: wenn ein Teilnehmer sendet, ist der Bus blockiert.
 
-**** Tassentopologie:
-     [[../OfficeLense/2020_09_17 17_49 Office Lens.jpg][Tassen-Bus]]
-
 *** Master/Slave oder alle Geräte gleichberechtigt
     Entweder ein Master-gerät steuert welches Gerät zu einem bestimmten Zeitpunkt senden darf, oder jedes der gleichberechtigten Geräte kann selbstständig zu senden beginnen
 

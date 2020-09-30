@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2020-09-24 Thu 16:29 -->
+<!-- 2020-09-28 Mon 11:19 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>&lrm;</title>
@@ -245,25 +245,25 @@ for the JavaScript code in this tag.
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents">
 <ul>
-<li><a href="#org859cfcf">1. Bus systeme</a>
+<li><a href="#orgd2b9fc9">1. Bus systeme</a>
 <ul>
-<li><a href="#org7c1f98d">1.1. Prinzipien, die für alle Bus-Systeme gelten:</a>
+<li><a href="#orge27db3b">1.1. Prinzipien, die für alle Bus-Systeme gelten:</a>
 <ul>
-<li><a href="#orge9ef569">1.1.1. Topologie:</a></li>
-<li><a href="#org62f0f49">1.1.2. Master/Slave oder alle Geräte gleichberechtigt</a></li>
-<li><a href="#org823feaf">1.1.3. Kollisionsvermeidung:</a></li>
-<li><a href="#org13e4c72">1.1.4. Bufferung:</a></li>
-<li><a href="#org6aae53e">1.1.5. Kollisionsvermeidung</a></li>
+<li><a href="#orgb1597d9">1.1.1. Topologie:</a></li>
+<li><a href="#orgc2f4b55">1.1.2. Master/Slave oder alle Geräte gleichberechtigt</a></li>
+<li><a href="#org7550403">1.1.3. Kollisionsvermeidung:</a></li>
+<li><a href="#orgd0f72f9">1.1.4. Bufferung:</a></li>
+<li><a href="#orgce55182">1.1.5. Kollisionsvermeidung</a></li>
 </ul>
 </li>
-<li><a href="#orgeaadf17">1.2. RS232 / UART</a></li>
+<li><a href="#org393b8cd">1.2. RS232 / UART</a></li>
 </ul>
 </li>
 </ul>
 </div>
 </div>
-<div id="outline-container-org859cfcf" class="outline-2">
-<h2 id="org859cfcf"><span class="section-number-2">1</span> Bus systeme</h2>
+<div id="outline-container-orgd2b9fc9" class="outline-2">
+<h2 id="orgd2b9fc9"><span class="section-number-2">1</span> Bus systeme</h2>
 <div class="outline-text-2" id="text-1">
 <p>
 Dienen zum Datenaustausch zwischen verschiedenen Geräten oder zwischen verschiedenen Komponenten des selben Geräts.
@@ -294,12 +294,12 @@ verschiedene Busse haben verschiedene Anforderungen bezüglich Distanz und Über
 </ul>
 </div>
 
-<div id="outline-container-org7c1f98d" class="outline-3">
-<h3 id="org7c1f98d"><span class="section-number-3">1.1</span> Prinzipien, die für alle Bus-Systeme gelten:</h3>
+<div id="outline-container-orge27db3b" class="outline-3">
+<h3 id="orge27db3b"><span class="section-number-3">1.1</span> Prinzipien, die für alle Bus-Systeme gelten:</h3>
 <div class="outline-text-3" id="text-1-1">
 </div>
-<div id="outline-container-orge9ef569" class="outline-4">
-<h4 id="orge9ef569"><span class="section-number-4">1.1.1</span> Topologie:</h4>
+<div id="outline-container-orgb1597d9" class="outline-4">
+<h4 id="orgb1597d9"><span class="section-number-4">1.1.1</span> Topologie:</h4>
 <div class="outline-text-4" id="text-1-1-1">
 <p>
 beschreibt, wie die einzelnen Geräte, die am Bus-System hängen, verbunden sind.
@@ -307,7 +307,7 @@ beschreibt, wie die einzelnen Geräte, die am Bus-System hängen, verbunden sind
 </div>
 
 <ol class="org-ol">
-<li><a id="org35feb57"></a>Peer-to-Peer (zb UART):<br />
+<li><a id="orgfd17883"></a>Peer-to-Peer (zb UART):<br />
 <div class="outline-text-5" id="text-1-1-1-1">
 <p>
 <a href="./../OfficeLense/2020_09_17 16_55 Office Lens (1).jpg">Peer-to-Peer Bus</a>
@@ -318,7 +318,7 @@ Vorteil: keine Addressierung nötig
 </div>
 </li>
 
-<li><a id="org3dfb685"></a>Linientopologien (zb CAN-Bus):<br />
+<li><a id="orgda8cad3"></a>Linientopologien (zb CAN-Bus):<br />
 <div class="outline-text-5" id="text-1-1-1-2">
 <p>
 <a href="./../OfficeLense/2020_09_17 16_55 Office Lens (2).jpg">CAN-Bus</a>
@@ -328,7 +328,7 @@ Nachteil: unterbrechung an einer Stelle führt zu Kommunikationsunterbrechung -&
 </div>
 </li>
 
-<li><a id="org3fec7bf"></a>Ringtopologie:<br />
+<li><a id="orgfe3d1a2"></a>Ringtopologie:<br />
 <div class="outline-text-5" id="text-1-1-1-3">
 <p>
 <a href="./../OfficeLense/2020_09_17 17_11 Office Lens.jpg">Ring-Bus</a>
@@ -337,7 +337,7 @@ Vorteil: Umbauen des Systems im laufenden Betriebs möglich
 </div>
 </li>
 
-<li><a id="orgf4d0468"></a>Baumtopologie:<br />
+<li><a id="org308b6fa"></a>Baumtopologie:<br />
 <div class="outline-text-5" id="text-1-1-1-4">
 <p>
 <a href="../OfficeLense/2020_09_17 17_34 Office Lens (1).jpg">Baum-Bus</a>
@@ -346,7 +346,7 @@ Vorteil: die Kommunikation in einem untersystem blockiert die Kommunikation in e
 </div>
 </li>
 
-<li><a id="org28d22e0"></a>Sterntopologie:<br />
+<li><a id="org543fb8d"></a>Sterntopologie:<br />
 <div class="outline-text-5" id="text-1-1-1-5">
 <p>
 <a href="../OfficeLense/2020_09_17 17_34 Office Lens (2).jpg">Stern-Bus</a>
@@ -360,7 +360,7 @@ Nachteil bei Linien- und Ringtopologien: wenn ein Teilnehmer sendet, ist der Bus
 </div>
 </li>
 
-<li><a id="org833a7c1"></a>Tassentopologie:<br />
+<li><a id="org7c66f7f"></a>Tassentopologie:<br />
 <div class="outline-text-5" id="text-1-1-1-6">
 <p>
 <a href="../OfficeLense/2020_09_17 17_49 Office Lens.jpg">Tassen-Bus</a>
@@ -370,8 +370,8 @@ Nachteil bei Linien- und Ringtopologien: wenn ein Teilnehmer sendet, ist der Bus
 </ol>
 </div>
 
-<div id="outline-container-org62f0f49" class="outline-4">
-<h4 id="org62f0f49"><span class="section-number-4">1.1.2</span> Master/Slave oder alle Geräte gleichberechtigt</h4>
+<div id="outline-container-orgc2f4b55" class="outline-4">
+<h4 id="orgc2f4b55"><span class="section-number-4">1.1.2</span> Master/Slave oder alle Geräte gleichberechtigt</h4>
 <div class="outline-text-4" id="text-1-1-2">
 <p>
 Entweder ein Master-gerät steuert welches Gerät zu einem bestimmten Zeitpunkt senden darf, oder jedes der gleichberechtigten Geräte kann selbstständig zu senden beginnen
@@ -388,8 +388,8 @@ Bei gleichberechtigten Systemen benötigt der Bus ein Verfahren zur
 </div>
 </div>
 
-<div id="outline-container-org823feaf" class="outline-4">
-<h4 id="org823feaf"><span class="section-number-4">1.1.3</span> Kollisionsvermeidung:</h4>
+<div id="outline-container-org7550403" class="outline-4">
+<h4 id="org7550403"><span class="section-number-4">1.1.3</span> Kollisionsvermeidung:</h4>
 <div class="outline-text-4" id="text-1-1-3">
 <p>
 Wenn mehrere Geräte zugleich zu senden beginnen, muss klar sein, welches Gerät Priorität hat. Die anderen Geräte müssen bemerken, dass ein Gerät mit höherer Priorität sendet und ihre Übertragung abbrechen
@@ -401,8 +401,8 @@ Bei mehreren Geräten erhält jedes eine andere Adresse, diese Adresse wird mit 
 </div>
 </div>
 
-<div id="outline-container-org13e4c72" class="outline-4">
-<h4 id="org13e4c72"><span class="section-number-4">1.1.4</span> Bufferung:</h4>
+<div id="outline-container-orgd0f72f9" class="outline-4">
+<h4 id="orgd0f72f9"><span class="section-number-4">1.1.4</span> Bufferung:</h4>
 <div class="outline-text-4" id="text-1-1-4">
 <p>
 jedes Gerät benötigt einen Zwischenspeicher für empfangene Daten (=&gt; Buffer), der vom Gerät ausgelesen wird, sobald es Zeit dazu hat
@@ -410,16 +410,20 @@ jedes Gerät benötigt einen Zwischenspeicher für empfangene Daten (=&gt; Buffe
 </div>
 </div>
 
-<div id="outline-container-org6aae53e" class="outline-4">
-<h4 id="org6aae53e"><span class="section-number-4">1.1.5</span> Kollisionsvermeidung</h4>
+<div id="outline-container-orgce55182" class="outline-4">
+<h4 id="orgce55182"><span class="section-number-4">1.1.5</span> Kollisionsvermeidung</h4>
 </div>
 </div>
 
-<div id="outline-container-orgeaadf17" class="outline-3">
-<h3 id="orgeaadf17"><span class="section-number-3">1.2</span> RS232 / UART</h3>
+<div id="outline-container-org393b8cd" class="outline-3">
+<h3 id="org393b8cd"><span class="section-number-3">1.2</span> RS232 / UART</h3>
 <div class="outline-text-3" id="text-1-2">
 <p>
 Universal Asynchronous Receive / Transmit
+</p>
+
+<p>
+<a href="../OfficeLense/2020_09_24 16_33 Office Lens.jpg">RS232</a>
 </p>
 
 <table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
@@ -447,7 +451,7 @@ Universal Asynchronous Receive / Transmit
 </div>
 </div>
 <div id="postamble" class="status">
-<p class="date">Created: 2020-09-24 Thu 16:29</p>
+<p class="date">Created: 2020-09-28 Mon 11:19</p>
 <p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
 </div>
 </body>
