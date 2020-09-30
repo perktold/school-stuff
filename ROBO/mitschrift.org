@@ -47,7 +47,7 @@ _Bsp Fensterputzroboter:_
 + Humanoide Roboter
 
 * Industrieroboter
-nach VDI: 2860 //
+nach VDI: 2860 \\
 Industrieroboter sind universell einsetzbare Bewegungsautomaten mit mehreren Achsen, deren Bewegungen hinsichtlich Bewegungsfolge und -wegen/winkeln frei (das heißt ohne mechanischen Eingriff) programmierbar und gegebenenfalls sensorgeführt sind. Sie sind mit Greifern, Werkzeugen oder anderen Fertigungsmitteln ausrüstbar und können Handhabungs- und/oder Fertigungsaufgaben durchführen
 
 FK Metall S 554 (moodle)
@@ -60,17 +60,66 @@ Realisierung von Bewegungen:
 - Translation (T)
 - Rotation (R)
 
-Hauptachsen eines IR sind die ersten 3 Bewegungsachsen (f die Lage/Position) -> von RRR bis TTT alles möglich //
+Hauptachsen eines IR sind die ersten 3 Bewegungsachsen (für die Lage/Position) -> von RRR bis TTT alles möglich \\
 Nebenachsen / Handachsen: -> nur RRR
 
 TTT: Portalroboter
 RRT: Scararoboter
 RRR: Knickarmroboter
 
-_Leistungmerkmale:_
+** Leistungmerkmale:
 + Anzahl Achsen/Bauart
 + Arbeitsraum, Gefahrenbereich
 + Nennlast, max.Traglast
 + Geschwindigkeit
 + Wiederholgenauigkeit
 + Positioniergenauigkeit
+
+** 30.09.2020 Roboterhersteller:
++ Mitsubishi
++ ABB
++ Fanuc
++ Kawasaki
++ Yaskawa
++ KUKA
+
+** Baugruppen:
++ Kinematik:
+  + Arme
+  + Gelenke
+  + Führungen
++ Antriebstechnik:
+  + Motor+Getriebe
+    + zB HarmoncDrive Getriebe
+    + zB Servomotoren
+    + zB Schrittmotoren
++ Wegmesssysteme:
+  + direkt/indirekte
+  + absolute/inkrementelle
++ Sensoren:
+  + zB Kraft
+  + zB Bildverarbeitung
+  + zB Taster
++ Steuerung:
+  + Programmierung
+  + Kommunikation (I/O)
+
+** Programmierung:
++ Online
+  + TeachIn (Punkte mit Roboter abfahren + Abspeichern)
+  + Playback (Roboter bewegen => automatisches Abspeichern von Punkten)
++ Offline
+  + Textuelles Programmieren
+  + Implizite Programmierung
+
+** Koordinatensysteme:
++ Arten:
+  + kartesisch
+  + polar
+  + zylindrische Kordinaten
+  + sphärische Koordinaten
++ RoboterKS:
+  + Welt-KS
+  + Roboter-KS
+  + Werkstück-KS
+  + Werkzeug-KS
