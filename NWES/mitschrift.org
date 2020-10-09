@@ -1,3 +1,5 @@
+#+HTML_HEAD: <link rel="stylesheet" type="text/css" href="../SWP_Holzmann/style.css" />
+
 * Bus systeme
 Dienen zum Datenaustausch zwischen verschiedenen Geräten oder zwischen verschiedenen Komponenten des selben Geräts.
 
@@ -8,11 +10,11 @@ verschiedene Busse haben verschiedene Anforderungen bezüglich Distanz und Über
 2 Arten der Übertragung:
 + Paralell:
   + mehrere zusammengehörige bits werden gleichzeitig auf mehreren Leitungen übertragen
-  + schnell aber hoher Hardwareaufwand -> nur über relativ kurze Distanzen, zb innerhalb eines PC
+  + schnell aber hoher Hardwareaufwand → nur über relativ kurze Distanzen, zb innerhalb eines PC
 + seriell:
   + bits werden hintereinander (seriell) auf einer Leitung geschickt
   + langsam, niedrigerer Hardwareaufwand
-
+    
 ** Prinzipien, die für alle Bus-Systeme gelten:
 
 *** Topologie:
@@ -60,7 +62,14 @@ Bei mehreren Geräten erhält jedes eine andere Adresse, diese Adresse wird mit 
 *** Bufferung:
 jedes Gerät benötigt einen Zwischenspeicher für empfangene Daten (=> Buffer), der vom Gerät ausgelesen wird, sobald es Zeit dazu hat
 
-*** Kollisionsvermeidung
+*** Synchronisierung:
+Eine Abfolge von 1en wird vom Sender als durchgehendes HIGH-Signal übertragen => damit Empfänger weiß, wie viele 1en das sind, muss festgelegt werden, wann das nächste gültige Datenbit anliegt.
+
+Erste Möglichkeit (UART): jedes Bit hat eine fest definierte Dauer.
+
+Problem: leicht unterschiedlich schnelle uhren in Empfänger und Sender => müssen regelmäßig synchronisiert werden. Bei der UART dient dafür die fallende Flanke des Start-Bit
+
+Zweite Möglichkeit (I²C Bus): eigene Taktleitung zusätzlich zur Datenleitung im Kabel
 
 ** RS232 / UART
 Universal Asynchronous Receive / Transmit
@@ -69,3 +78,28 @@ Universal Asynchronous Receive / Transmit
 
 | RX: | Recieve  |
 | Tx: | Transmit |
+
+[[http://de.wikipedia.org/wiki/EIA-232]]
+
+1 Baud: 1 bit/s
+
+zB: bei 9600baud dauert ein bit 1/9600 sekunden
+
+1011 = 11(dec) = $b \\
+1101 = 13(dec) = $d
+
+*** Parity-Bit:
+Dient dazu, dass der Empfänger eine *ungerade* Anzahl an übertragungsfehlern in einem zeichen erkennt. Er kann diesen Fehler allerdings nicht korrigieren. Sender und Empfänger vereinbaren dass die Anzahl der Einsen in den Datenbits + Parity-Bit ungerade sein muss, Parity-Bit wird je nach Bedarf vom Sender auf 1 oder 0 gesetzt.
+
+Was bring das Parity-Bit? Wenn zB bei jedem 1000sten übertragenen char ein Bit fehler auftritt, der ohne Parity nicht erkannt wird, entspricht das einem Fehler pro Seite ASCII. Mit Parity-Bit: jedes Tausendste jeder fehlerhaften chars enthält ein zweites fehlerhaftes Bit, welches nicht erkannt wird => ein Bit fehler pro 1 000 000 char => ein fehler alle 1000 Seiten.
+
+*** UART Zusammenfassung:
++ Nur zwei Gesprächsteilnehmer → keine Addressierung nötig
++ Für jede übertragungsrichtung eigene Leitung → Kollisionsvermeidung unnötig
++ Synchronisierung erfolgt über fixe Baudrate / Bitdauer und fallende Flanke des Startbit
+
+*** RS232 Daisychaining
+zwischen je zwei Geräten besteht eine [[../OfficeLense/2020_10_08 16_32 Office Lens (1).jpg][Peer to Peer Verbindung]], es gibt keinen Gesamtbus. Jedes Gerät gibt Informationen, die für ein anderes Gerät bestimmt sind, von einer UART an die nächste weiter. Dazu notwendig: Jedes Gerät erhält eine Adresse, mit dem Befehl wird die Adresse des Geräts mitgeschickt, an das der Befehl gerichtet ist. Diese Adresse ist nicht für die einzelne UART, sondern für die ganze [[../OfficeLense/2020_10_08 16_32 Office Lens (2).jpg][Daisychain]].
+
+** Arbitrierung (Kollisionsvermeidung) beim CAN-Bus:
+Grundsätzlich fängt kein Gerät an zu schreiben, während ein anderes Gerät schreibt, sondern wartet das Ende der Nachricht ab. Wenn zwei Geräte zugleich zu schreiben beginnen: 

@@ -1,0 +1,26 @@
+* {
+    color: white;
+    background-color: black;
+}
+
+div {
+    margin: 0px;
+}
+
+.content {
+    position: relative;
+    top: 0px;
+    left: 0px;
+}
+
+.leftcol {
+    width: 20%;
+    background-color: darkgrey;
+}
+
+.rightcol {
+    position: absolute;
+    top: 0px;
+    left: 25%;
+    background-color: darkgrey;
+}

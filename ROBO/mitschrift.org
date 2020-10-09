@@ -1,8 +1,4 @@
-#+HTML_HEAD: <link rel="stylesheet" type="text/css" href="style.css" />
-
-|-----------------------------------|
-| *Robotics - Digitale Technologie* |
-|-----------------------------------|
+#+HTML_HEAD: <link rel="stylesheet" type="text/css" href="../SWP_Holzmann/style.css" />
 
 * *Robotertechnik*
 
@@ -32,7 +28,7 @@ _Bsp Fensterputzroboter:_
 | Beschleunugungssensor | Bluetooth, WLAN, etc |
 
 ** Einteilung der Roboter:
-*** _nach Verwendungszweck_
+*** nach Verwendungszweck
 + Serviceroboter
 + Spielzeugroboter
 + Erkundungsroboter
@@ -40,7 +36,7 @@ _Bsp Fensterputzroboter:_
 + Militär- und Kampfroboter
 + Medizinische Roboter
 
-*** _nach Konstruktionsweise_
+*** nach Konstruktionsweise
 + Stationäre Roboter
   + zb Industrieroboter (IR)
 + Mobile / autonome Roboter
@@ -123,3 +119,23 @@ RRR: Knickarmroboter
   + Roboter-KS
   + Werkstück-KS
   + Werkzeug-KS
+** Übung: YASKAWA Motoman roboter
+| Robo       | Bauart | Arbeitsraum  | Nennlast | Geschwindigkeit | Wiederholgenauigkeit |
+|------------+--------+--------------+----------+-----------------+----------------------|
+| MotoMini   | RRR    | 350x495mm    | 0.5kg    | 300-600°/s      | +-0.02mm             |
+| UP400RD    | RRR    | 3518x4909mm  | 400kg    | 80-160°/s       | +-0.5mm              |
+| SDA20F     | RRR    | 1323x910mm   | 20kg     | 130-400°/s      | +-0.1mm              |
+| MH50 II-20 | RRR    | 3106x55585mm | 20kg     | 180-600°/s      | +-0.15mm             |
+| MPL800II   | RRR    | 3159mm       | 800kg    | 65-125°/s       | +-0.5mm              |
+| GP120RL    | RRR    | 4004mm       | 120kg    | 90-240°/s       | +-0.2mm              |
+** Programmierung von IR
+*** Programmiersprachen
+Prizipiell je nach Hersteller, zB:
++ Kuka: KRL (KUKA Robot Language)
+Tendenz zu hochsprachen wie c++, c#, java, python etc
+*** Bewegungsarten:
++ PTP: point to point
++ LIN: linear
++ CIRC: circular
++ SPLINE:
+*** Kommunikation mit periphereinheit

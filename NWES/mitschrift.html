@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2020-09-28 Mon 11:19 -->
+<!-- 2020-10-09 Fri 10:31 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>&lrm;</title>
@@ -192,6 +192,7 @@
   .org-svg { width: 90%; }
   /*]]>*/-->
 </style>
+<link rel="stylesheet" type="text/css" href="../SWP_Holzmann/style.css" />
 <script type="text/javascript">
 /*
 @licstart  The following is the entire license notice for the
@@ -245,25 +246,33 @@ for the JavaScript code in this tag.
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents">
 <ul>
-<li><a href="#orgd2b9fc9">1. Bus systeme</a>
+<li><a href="#org5193fb4">1. Bus systeme</a>
 <ul>
-<li><a href="#orge27db3b">1.1. Prinzipien, die für alle Bus-Systeme gelten:</a>
+<li><a href="#orgd27cf03">1.1. Prinzipien, die für alle Bus-Systeme gelten:</a>
 <ul>
-<li><a href="#orgb1597d9">1.1.1. Topologie:</a></li>
-<li><a href="#orgc2f4b55">1.1.2. Master/Slave oder alle Geräte gleichberechtigt</a></li>
-<li><a href="#org7550403">1.1.3. Kollisionsvermeidung:</a></li>
-<li><a href="#orgd0f72f9">1.1.4. Bufferung:</a></li>
-<li><a href="#orgce55182">1.1.5. Kollisionsvermeidung</a></li>
+<li><a href="#org5b0570d">1.1.1. Topologie:</a></li>
+<li><a href="#org479f170">1.1.2. Master/Slave oder alle Geräte gleichberechtigt</a></li>
+<li><a href="#org3074899">1.1.3. Kollisionsvermeidung:</a></li>
+<li><a href="#org69bf393">1.1.4. Bufferung:</a></li>
+<li><a href="#orgcc3f007">1.1.5. Synchronisierung:</a></li>
 </ul>
 </li>
-<li><a href="#org393b8cd">1.2. RS232 / UART</a></li>
+<li><a href="#orgb0dcfb9">1.2. RS232 / UART</a>
+<ul>
+<li><a href="#orgd1b98fa">1.2.1. Parity-Bit:</a></li>
+<li><a href="#org6bcce72">1.2.2. UART Zusammenfassung:</a></li>
+<li><a href="#org0c7c1d4">1.2.3. RS232 Daisychaining</a></li>
+</ul>
+</li>
+<li><a href="#orge6299fa">1.3. Arbitrierung (Kollisionsvermeidung) beim CAN-Bus:</a></li>
 </ul>
 </li>
 </ul>
 </div>
 </div>
-<div id="outline-container-orgd2b9fc9" class="outline-2">
-<h2 id="orgd2b9fc9"><span class="section-number-2">1</span> Bus systeme</h2>
+
+<div id="outline-container-org5193fb4" class="outline-2">
+<h2 id="org5193fb4"><span class="section-number-2">1</span> Bus systeme</h2>
 <div class="outline-text-2" id="text-1">
 <p>
 Dienen zum Datenaustausch zwischen verschiedenen Geräten oder zwischen verschiedenen Komponenten des selben Geräts.
@@ -284,7 +293,7 @@ verschiedene Busse haben verschiedene Anforderungen bezüglich Distanz und Über
 <li>Paralell:
 <ul class="org-ul">
 <li>mehrere zusammengehörige bits werden gleichzeitig auf mehreren Leitungen übertragen</li>
-<li>schnell aber hoher Hardwareaufwand -&gt; nur über relativ kurze Distanzen, zb innerhalb eines PC</li>
+<li>schnell aber hoher Hardwareaufwand → nur über relativ kurze Distanzen, zb innerhalb eines PC</li>
 </ul></li>
 <li>seriell:
 <ul class="org-ul">
@@ -294,12 +303,12 @@ verschiedene Busse haben verschiedene Anforderungen bezüglich Distanz und Über
 </ul>
 </div>
 
-<div id="outline-container-orge27db3b" class="outline-3">
-<h3 id="orge27db3b"><span class="section-number-3">1.1</span> Prinzipien, die für alle Bus-Systeme gelten:</h3>
+<div id="outline-container-orgd27cf03" class="outline-3">
+<h3 id="orgd27cf03"><span class="section-number-3">1.1</span> Prinzipien, die für alle Bus-Systeme gelten:</h3>
 <div class="outline-text-3" id="text-1-1">
 </div>
-<div id="outline-container-orgb1597d9" class="outline-4">
-<h4 id="orgb1597d9"><span class="section-number-4">1.1.1</span> Topologie:</h4>
+<div id="outline-container-org5b0570d" class="outline-4">
+<h4 id="org5b0570d"><span class="section-number-4">1.1.1</span> Topologie:</h4>
 <div class="outline-text-4" id="text-1-1-1">
 <p>
 beschreibt, wie die einzelnen Geräte, die am Bus-System hängen, verbunden sind.
@@ -307,7 +316,7 @@ beschreibt, wie die einzelnen Geräte, die am Bus-System hängen, verbunden sind
 </div>
 
 <ol class="org-ol">
-<li><a id="orgfd17883"></a>Peer-to-Peer (zb UART):<br />
+<li><a id="orgbb7f5e6"></a>Peer-to-Peer (zb UART):<br />
 <div class="outline-text-5" id="text-1-1-1-1">
 <p>
 <a href="./../OfficeLense/2020_09_17 16_55 Office Lens (1).jpg">Peer-to-Peer Bus</a>
@@ -318,7 +327,7 @@ Vorteil: keine Addressierung nötig
 </div>
 </li>
 
-<li><a id="orgda8cad3"></a>Linientopologien (zb CAN-Bus):<br />
+<li><a id="org883f62d"></a>Linientopologien (zb CAN-Bus):<br />
 <div class="outline-text-5" id="text-1-1-1-2">
 <p>
 <a href="./../OfficeLense/2020_09_17 16_55 Office Lens (2).jpg">CAN-Bus</a>
@@ -328,7 +337,7 @@ Nachteil: unterbrechung an einer Stelle führt zu Kommunikationsunterbrechung -&
 </div>
 </li>
 
-<li><a id="orgfe3d1a2"></a>Ringtopologie:<br />
+<li><a id="org640ba42"></a>Ringtopologie:<br />
 <div class="outline-text-5" id="text-1-1-1-3">
 <p>
 <a href="./../OfficeLense/2020_09_17 17_11 Office Lens.jpg">Ring-Bus</a>
@@ -337,7 +346,7 @@ Vorteil: Umbauen des Systems im laufenden Betriebs möglich
 </div>
 </li>
 
-<li><a id="org308b6fa"></a>Baumtopologie:<br />
+<li><a id="org34d4864"></a>Baumtopologie:<br />
 <div class="outline-text-5" id="text-1-1-1-4">
 <p>
 <a href="../OfficeLense/2020_09_17 17_34 Office Lens (1).jpg">Baum-Bus</a>
@@ -346,7 +355,7 @@ Vorteil: die Kommunikation in einem untersystem blockiert die Kommunikation in e
 </div>
 </li>
 
-<li><a id="org543fb8d"></a>Sterntopologie:<br />
+<li><a id="org602263f"></a>Sterntopologie:<br />
 <div class="outline-text-5" id="text-1-1-1-5">
 <p>
 <a href="../OfficeLense/2020_09_17 17_34 Office Lens (2).jpg">Stern-Bus</a>
@@ -359,19 +368,11 @@ Nachteil bei Linien- und Ringtopologien: wenn ein Teilnehmer sendet, ist der Bus
 </p>
 </div>
 </li>
-
-<li><a id="org7c66f7f"></a>Tassentopologie:<br />
-<div class="outline-text-5" id="text-1-1-1-6">
-<p>
-<a href="../OfficeLense/2020_09_17 17_49 Office Lens.jpg">Tassen-Bus</a>
-</p>
-</div>
-</li>
 </ol>
 </div>
 
-<div id="outline-container-orgc2f4b55" class="outline-4">
-<h4 id="orgc2f4b55"><span class="section-number-4">1.1.2</span> Master/Slave oder alle Geräte gleichberechtigt</h4>
+<div id="outline-container-org479f170" class="outline-4">
+<h4 id="org479f170"><span class="section-number-4">1.1.2</span> Master/Slave oder alle Geräte gleichberechtigt</h4>
 <div class="outline-text-4" id="text-1-1-2">
 <p>
 Entweder ein Master-gerät steuert welches Gerät zu einem bestimmten Zeitpunkt senden darf, oder jedes der gleichberechtigten Geräte kann selbstständig zu senden beginnen
@@ -388,8 +389,8 @@ Bei gleichberechtigten Systemen benötigt der Bus ein Verfahren zur
 </div>
 </div>
 
-<div id="outline-container-org7550403" class="outline-4">
-<h4 id="org7550403"><span class="section-number-4">1.1.3</span> Kollisionsvermeidung:</h4>
+<div id="outline-container-org3074899" class="outline-4">
+<h4 id="org3074899"><span class="section-number-4">1.1.3</span> Kollisionsvermeidung:</h4>
 <div class="outline-text-4" id="text-1-1-3">
 <p>
 Wenn mehrere Geräte zugleich zu senden beginnen, muss klar sein, welches Gerät Priorität hat. Die anderen Geräte müssen bemerken, dass ein Gerät mit höherer Priorität sendet und ihre Übertragung abbrechen
@@ -401,8 +402,8 @@ Bei mehreren Geräten erhält jedes eine andere Adresse, diese Adresse wird mit 
 </div>
 </div>
 
-<div id="outline-container-orgd0f72f9" class="outline-4">
-<h4 id="orgd0f72f9"><span class="section-number-4">1.1.4</span> Bufferung:</h4>
+<div id="outline-container-org69bf393" class="outline-4">
+<h4 id="org69bf393"><span class="section-number-4">1.1.4</span> Bufferung:</h4>
 <div class="outline-text-4" id="text-1-1-4">
 <p>
 jedes Gerät benötigt einen Zwischenspeicher für empfangene Daten (=&gt; Buffer), der vom Gerät ausgelesen wird, sobald es Zeit dazu hat
@@ -410,13 +411,30 @@ jedes Gerät benötigt einen Zwischenspeicher für empfangene Daten (=&gt; Buffe
 </div>
 </div>
 
-<div id="outline-container-orgce55182" class="outline-4">
-<h4 id="orgce55182"><span class="section-number-4">1.1.5</span> Kollisionsvermeidung</h4>
+<div id="outline-container-orgcc3f007" class="outline-4">
+<h4 id="orgcc3f007"><span class="section-number-4">1.1.5</span> Synchronisierung:</h4>
+<div class="outline-text-4" id="text-1-1-5">
+<p>
+Eine Abfolge von 1en wird vom Sender als durchgehendes HIGH-Signal übertragen =&gt; damit Empfänger weiß, wie viele 1en das sind, muss festgelegt werden, wann das nächste gültige Datenbit anliegt.
+</p>
+
+<p>
+Erste Möglichkeit (UART): jedes Bit hat eine fest definierte Dauer.
+</p>
+
+<p>
+Problem: leicht unterschiedlich schnelle uhren in Empfänger und Sender =&gt; müssen regelmäßig synchronisiert werden. Bei der UART dient dafür die fallende Flanke des Start-Bit
+</p>
+
+<p>
+Zweite Möglichkeit (I²C Bus): eigene Taktleitung zusätzlich zur Datenleitung im Kabel
+</p>
+</div>
 </div>
 </div>
 
-<div id="outline-container-org393b8cd" class="outline-3">
-<h3 id="org393b8cd"><span class="section-number-3">1.2</span> RS232 / UART</h3>
+<div id="outline-container-orgb0dcfb9" class="outline-3">
+<h3 id="orgb0dcfb9"><span class="section-number-3">1.2</span> RS232 / UART</h3>
 <div class="outline-text-3" id="text-1-2">
 <p>
 Universal Asynchronous Receive / Transmit
@@ -446,12 +464,71 @@ Universal Asynchronous Receive / Transmit
 </tr>
 </tbody>
 </table>
+
+<p>
+<a href="http://de.wikipedia.org/wiki/EIA-232">http://de.wikipedia.org/wiki/EIA-232</a>
+</p>
+
+<p>
+1 Baud: 1 bit/s
+</p>
+
+<p>
+zB: bei 9600baud dauert ein bit 1/9600 sekunden
+</p>
+
+<p>
+1011 = 11(dec) = $b <br />
+1101 = 13(dec) = $d
+</p>
+</div>
+
+<div id="outline-container-orgd1b98fa" class="outline-4">
+<h4 id="orgd1b98fa"><span class="section-number-4">1.2.1</span> Parity-Bit:</h4>
+<div class="outline-text-4" id="text-1-2-1">
+<p>
+Dient dazu, dass der Empfänger eine <b>ungerade</b> Anzahl an übertragungsfehlern in einem zeichen erkennt. Er kann diesen Fehler allerdings nicht korrigieren. Sender und Empfänger vereinbaren dass die Anzahl der Einsen in den Datenbits + Parity-Bit ungerade sein muss, Parity-Bit wird je nach Bedarf vom Sender auf 1 oder 0 gesetzt.
+</p>
+
+<p>
+Was bring das Parity-Bit? Wenn zB bei jedem 1000sten übertragenen char ein Bit fehler auftritt, der ohne Parity nicht erkannt wird, entspricht das einem Fehler pro Seite ASCII. Mit Parity-Bit: jedes Tausendste jeder fehlerhaften chars enthält ein zweites fehlerhaftes Bit, welches nicht erkannt wird =&gt; ein Bit fehler pro 1 000 000 char =&gt; ein fehler alle 1000 Seiten.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org6bcce72" class="outline-4">
+<h4 id="org6bcce72"><span class="section-number-4">1.2.2</span> UART Zusammenfassung:</h4>
+<div class="outline-text-4" id="text-1-2-2">
+<ul class="org-ul">
+<li>Nur zwei Gesprächsteilnehmer → keine Addressierung nötig</li>
+<li>Für jede übertragungsrichtung eigene Leitung → Kollisionsvermeidung unnötig</li>
+<li>Synchronisierung erfolgt über fixe Baudrate / Bitdauer und fallende Flanke des Startbit</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org0c7c1d4" class="outline-4">
+<h4 id="org0c7c1d4"><span class="section-number-4">1.2.3</span> RS232 Daisychaining</h4>
+<div class="outline-text-4" id="text-1-2-3">
+<p>
+zwischen je zwei Geräten besteht eine <a href="../OfficeLense/2020_10_08 16_32 Office Lens (1).jpg">Peer to Peer Verbindung</a>, es gibt keinen Gesamtbus. Jedes Gerät gibt Informationen, die für ein anderes Gerät bestimmt sind, von einer UART an die nächste weiter. Dazu notwendig: Jedes Gerät erhält eine Adresse, mit dem Befehl wird die Adresse des Geräts mitgeschickt, an das der Befehl gerichtet ist. Diese Adresse ist nicht für die einzelne UART, sondern für die ganze <a href="../OfficeLense/2020_10_08 16_32 Office Lens (2).jpg">Daisychain</a>.
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orge6299fa" class="outline-3">
+<h3 id="orge6299fa"><span class="section-number-3">1.3</span> Arbitrierung (Kollisionsvermeidung) beim CAN-Bus:</h3>
+<div class="outline-text-3" id="text-1-3">
+<p>
+Grundsätzlich fängt kein Gerät an zu schreiben, während ein anderes Gerät schreibt, sondern wartet das Ende der Nachricht ab. Wenn zwei Geräte zugleich zu schreiben beginnen: 
+</p>
 </div>
 </div>
 </div>
 </div>
 <div id="postamble" class="status">
-<p class="date">Created: 2020-09-28 Mon 11:19</p>
+<p class="date">Created: 2020-10-09 Fri 10:31</p>
 <p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
 </div>
 </body>

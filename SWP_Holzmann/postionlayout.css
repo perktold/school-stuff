@@ -1,0 +1,35 @@
+* {
+    box-sizing: 
+        border-box;
+}
+
+div {
+    margin:0px;
+}
+
+.content {
+    position: relative;
+    top:0px;
+    left: 0px;
+}
+.leftcol {
+    width: 30%;
+    background-color: yellow;
+}
+.rightcol {
+    position: absolute;
+    top:0px;
+    left:32%;
+    width:68%; 
+    background-color: greenyellow;
+}
+
+/* Responsive layout: make columns stack on top of each other instead of next to each other on smaller screens (600px wide or less) */
+@media screen and (max-width: 600px) {
+  .leftcol,.rightcol {
+    width: 100%;
+    position: relative;
+    top:0px;
+    left:0px;
+  }
+}

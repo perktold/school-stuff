@@ -1,0 +1,25 @@
+div~p {
+    background-color: yellow;
+}
+
+div+p {
+    background-color: aqua;
+}
+
+p:hover {
+    background-color: darkgrey;
+}
+
+p::first-letter {
+    font-size: 2em;
+}
+
+.rot {
+    font-size: 3em;
+    margin:20px;
+    background-color: red;
+}
+
+.rot:hover {
+    background-color: pink;
+}
