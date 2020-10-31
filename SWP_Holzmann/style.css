@@ -5,7 +5,6 @@
 
     --green:		#a6e22e;
     --darkgreen:	#70991f;
-
     --white:		#f8f8f2;
     --black:		#000000;
     --gray:		#727564;
@@ -20,7 +19,7 @@
     --magenta:		#f92672;
     --darkmagenta:	#b31b52;
     --red:		#f9263f;
-    --darkred:		#b31b2d;
+    --darkred:          #772200;
 }
 
 colgroup {
@@ -29,10 +28,16 @@ colgroup {
 tbody {
 }
 
+.underline {
+    background-color: var(--white);
+    color: var(--darkgray);
+    text-decoration: none;
+}
+
 body {
     font-family: monospace;
     font-size: 16.5px;
-    background: var(--darkgray);
+    background-color: var(--darkgray);
     color: var(--white);
     padding-left: 10%;
     padding-right: 10%;
@@ -52,21 +57,19 @@ h3 {
     font-size: 150%;
     padding-left: 5%;
     color: var(--yellow);
-    text-decoration: overline underline;
+    text-decoration: underline;
     text-decoration-style: double;
 }
 
-h3:hover {
-}
-
 h4 {
+    font-size: 120%;
     color: var(--cyan);
-    text-decoration: underline;
+    text-decoration: overline underline;
     text-decoration-style: dotted;
 }
 
 p {
-    line-height: 150%
+    line-height: 150%;
 }
 
 a {
@@ -80,7 +83,7 @@ a:hover {
 li{
     margin: 0.5%;
     padding: 0.5%;
-    margin-right: 50%;
+    margin-right: 20%;
     border-radius: 5px;
     background-image: linear-gradient(to right, var(--darkdarkgray), var(--darkgray));
 }
@@ -88,8 +91,10 @@ li{
 li:hover {
 }
 
-.text-table-of-contents ul{
+#text-table-of-contents li {
     background-image: none;
+    margin: 0;
+    padding: 0;
 }
 
 li li {
@@ -101,14 +106,5 @@ li li {
 li li li {
     margin: 0;
     padding: 0;
-    color: var(--darkmagenta);
     background-image: none;
-}
-
-
-img {
-    padding: 20px;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
 }

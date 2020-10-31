@@ -49,12 +49,12 @@ Industrieroboter sind universell einsetzbare Bewegungsautomaten mit mehreren Ach
 FK Metall S 554 (moodle)
 ** Freiheitsgrade
 Körper im Raum hat 6 Freiheitsgrade:
-- 3x für Lage/Position
-- 3x für Orientierung (Drehung um die Achsen)
++ 3x für Lage/Position
++ 3x für Orientierung (Drehung um die Achsen)
 
 Realisierung von Bewegungen:
-- Translation (T)
-- Rotation (R)
++ Translation (T)
++ Rotation (R)
 
 Hauptachsen eines IR sind die ersten 3 Bewegungsachsen (für die Lage/Position) -> von RRR bis TTT alles möglich \\
 Nebenachsen / Handachsen: -> nur RRR
@@ -138,4 +138,42 @@ Tendenz zu hochsprachen wie c++, c#, java, python etc
 + LIN: linear
 + CIRC: circular
 + SPLINE:
-*** Kommunikation mit periphereinheit
+
+** Harmonic Drive Getriebe
++ Circular Spline: Ring mit Innenverzahnung (z Zähne)
++ Flexspline: "Glocke" mit Außenverzahnung (z-2 Zähne)
++ Wave Generator: Elliptische Welle (ermöglicht Eingriff von Flexspline in Circular Spline)
+
+*** Vorteile
++ hohe Über/Untersetzungen
++ Wartungsfrei
++ 3 Bauteile sind Koaxial
++ Versorgungsleitungen durch Hohlwelle möglich
+
+** Wegmessysteme
++ direkt
+  + zB Werkzeugschlitten
+  + translatorische Bewegung wird direkt gemessen
++ indirekt
+  + zB Werkzeugschlitten
+  + rotatorische Bewegung der Spindel wird gemessen, Translatorische Bewegung des Schlitten wird abgeleitet
+
++ absolut
+  + zB Poti
+  + jeder Position wird direkt ein Wert zugeordnet
++ inkremental
+  + zB Glasmaßstab
+  + Position wird nicht direkt gemessen, sondern Positionsänderungen
+  + → Nullpunkt muss gesetzt werden
+
+** Endeffektoren / Effektoren
+   Greifer (zB Magnetgreifer) und Werkzeuge (zB Punktschweißzange) sind prinzipiell nicht vom Roboterhersteller → nicht teil der Nennlast
+
+   meist Produktanpassung notwendig → Sonderanfertigung
+
+   es existieren auch Standardgreifer: zB Fa. Schunk, Fa. Faude, Fa. ZimmerGroup, Fa. FIPA, Fa. IPR...
+
+*** _Übungsbsp:_
++ Rohteil: 57g
++ Fertigteil: Zahnrad
++ Abstand Rohteil→Robote
