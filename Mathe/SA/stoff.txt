@@ -1,0 +1,7 @@
+3AHWII - Schularbeitsstoff:
+
+- 1.1, 1.2 Folgen (allgemein, arithmetisch, geometrisch), Reihen (arithmetisch, geometrisch, Herleitung der Summenformeln -> Bonuspunkte)
+- 1.3 Finanzmathematik (Zinsen (linear), Zinseszinsen (exponentiell), gemischt), Inflation, Renten/Zahlungen zu verschiedenen Zeitpunkten
+- 1.4 Konvergenz/Divergenz
+- 2 Stetigkeit (Anschauliche Definition), Grenzwert einer Funktion bei x0 und im +-Unendlichen, Asymptoten bei gebrochen-rationalen Funktionen
+- 3 Differentialrechnung (Idee, Differentialquotient ("Ableiten ohne Ableitungsregeln"), Tangenten bestimmen, Ableitungsregeln (Faktor-, Summen-, Produkt-, Quotienten-, Kettenregel))

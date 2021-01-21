@@ -1,0 +1,179 @@
+#+HTML_HEAD: <link rel="stylesheet" type="text/css" href="../SWP_Holzmann/style.css" />
+
+* *Robotertechnik*
+
+-> Roboter: VDI 6222 Blatt1
+
+"Mechatronische Bewegungssysteme, also Integrationsprodukte von Sensorik, Informationsverarbeitung und Akterik"
+
+[[../OfficeLense/Mechatronic.png][Mechatronik]]
+
++ Mechanik/Maschinenbau
++ Elektronik/Elektrotechnik
++ Informatik/Informationstechnik
+
+EVA-Prinzp: \\
+Eingabe -> Verarbeitung -> Ausgabe \\
+Sensorik -> Prozessorik -> Aktorik
+
+_Bsp Fensterputzroboter:_
+| Sensorik              | Aktorik              |
+|-----------------------+----------------------|
+| Taster, Schalter      | Antriebsmotoren      |
+| Reflexionslichtsensor | Düsen                |
+| Luftdrucksensor       | Piezo                |
+| Füllstandsensor       | Unterdruckventilator |
+| IR-Sensor             | Kontrolleuchten      |
+| Mikrofon              | Akustischer output   |
+| Beschleunugungssensor | Bluetooth, WLAN, etc |
+
+** Einteilung der Roboter:
+*** nach Verwendungszweck
++ Serviceroboter
++ Spielzeugroboter
++ Erkundungsroboter
++ Transportroboter
++ Militär- und Kampfroboter
++ Medizinische Roboter
+
+*** nach Konstruktionsweise
++ Stationäre Roboter
+  + zb Industrieroboter (IR)
++ Mobile / autonome Roboter
++ Humanoide Roboter
+
+* Industrieroboter
+nach VDI: 2860 \\
+Industrieroboter sind universell einsetzbare Bewegungsautomaten mit mehreren Achsen, deren Bewegungen hinsichtlich Bewegungsfolge und -wegen/winkeln frei (das heißt ohne mechanischen Eingriff) programmierbar und gegebenenfalls sensorgeführt sind. Sie sind mit Greifern, Werkzeugen oder anderen Fertigungsmitteln ausrüstbar und können Handhabungs- und/oder Fertigungsaufgaben durchführen
+
+FK Metall S 554 (moodle)
+** Freiheitsgrade
+Körper im Raum hat 6 Freiheitsgrade:
++ 3x für Lage/Position
++ 3x für Orientierung (Drehung um die Achsen)
+
+Realisierung von Bewegungen:
++ Translation (T)
++ Rotation (R)
+
+Hauptachsen eines IR sind die ersten 3 Bewegungsachsen (für die Lage/Position) -> von RRR bis TTT alles möglich \\
+Nebenachsen / Handachsen: -> nur RRR
+
+TTT: Portalroboter
+RRT: Scararoboter
+RRR: Knickarmroboter
+
+** Leistungmerkmale:
++ Anzahl Achsen/Bauart
++ Arbeitsraum, Gefahrenbereich
++ Nennlast, max.Traglast
++ Geschwindigkeit
++ Wiederholgenauigkeit
++ Positioniergenauigkeit
+
+** 30.09.2020 Roboterhersteller:
++ Mitsubishi
++ ABB
++ Fanuc
++ Kawasaki
++ Yaskawa
++ KUKA
+
+** Baugruppen:
++ Kinematik:
+  + Arme
+  + Gelenke
+  + Führungen
++ Antriebstechnik:
+  + Motor+Getriebe
+    + zB HarmoncDrive Getriebe
+    + zB Servomotoren
+    + zB Schrittmotoren
++ Wegmesssysteme:
+  + direkt/indirekte
+  + absolute/inkrementelle
++ Sensoren:
+  + zB Kraft
+  + zB Bildverarbeitung
+  + zB Taster
++ Steuerung:
+  + Programmierung
+  + Kommunikation (I/O)
+
+** Programmierung:
++ Online
+  + TeachIn (Punkte mit Roboter abfahren + Abspeichern)
+  + Playback (Roboter bewegen => automatisches Abspeichern von Punkten)
++ Offline
+  + Textuelles Programmieren
+  + Implizite Programmierung
+
+** Koordinatensysteme:
++ Arten:
+  + kartesisch
+  + polar
+  + zylindrische Kordinaten
+  + sphärische Koordinaten
++ RoboterKS:
+  + Welt-KS
+  + Roboter-KS
+  + Werkstück-KS
+  + Werkzeug-KS
+** Übung: YASKAWA Motoman roboter
+| Robo       | Bauart | Arbeitsraum  | Nennlast | Geschwindigkeit | Wiederholgenauigkeit |
+|------------+--------+--------------+----------+-----------------+----------------------|
+| MotoMini   | RRR    | 350x495mm    | 0.5kg    | 300-600°/s      | +-0.02mm             |
+| UP400RD    | RRR    | 3518x4909mm  | 400kg    | 80-160°/s       | +-0.5mm              |
+| SDA20F     | RRR    | 1323x910mm   | 20kg     | 130-400°/s      | +-0.1mm              |
+| MH50 II-20 | RRR    | 3106x55585mm | 20kg     | 180-600°/s      | +-0.15mm             |
+| MPL800II   | RRR    | 3159mm       | 800kg    | 65-125°/s       | +-0.5mm              |
+| GP120RL    | RRR    | 4004mm       | 120kg    | 90-240°/s       | +-0.2mm              |
+** Programmierung von IR
+*** Programmiersprachen
+Prizipiell je nach Hersteller, zB:
++ Kuka: KRL (KUKA Robot Language)
+Tendenz zu hochsprachen wie c++, c#, java, python etc
+*** Bewegungsarten:
++ PTP: point to point
++ LIN: linear
++ CIRC: circular
++ SPLINE:
+
+** Harmonic Drive Getriebe
++ Circular Spline: Ring mit Innenverzahnung (z Zähne)
++ Flexspline: "Glocke" mit Außenverzahnung (z-2 Zähne)
++ Wave Generator: Elliptische Welle (ermöglicht Eingriff von Flexspline in Circular Spline)
+
+*** Vorteile
++ hohe Über/Untersetzungen
++ Wartungsfrei
++ 3 Bauteile sind Koaxial
++ Versorgungsleitungen durch Hohlwelle möglich
+
+** Wegmessysteme
++ direkt
+  + zB Werkzeugschlitten
+  + translatorische Bewegung wird direkt gemessen
++ indirekt
+  + zB Werkzeugschlitten
+  + rotatorische Bewegung der Spindel wird gemessen, Translatorische Bewegung des Schlitten wird abgeleitet
+
++ absolut
+  + zB Poti
+  + jeder Position wird direkt ein Wert zugeordnet
++ inkremental
+  + zB Glasmaßstab
+  + Position wird nicht direkt gemessen, sondern Positionsänderungen
+  + → Nullpunkt muss gesetzt werden
+
+** Endeffektoren / Effektoren
+   Greifer (zB Magnetgreifer) und Werkzeuge (zB Punktschweißzange) sind prinzipiell nicht vom Roboterhersteller → nicht teil der Nennlast
+
+   meist Produktanpassung notwendig → Sonderanfertigung
+
+   es existieren auch Standardgreifer: zB Fa. Schunk, Fa. Faude, Fa. ZimmerGroup, Fa. FIPA, Fa. IPR...
+
+*** _Übungsbsp:_
++ Rohteil: 57g
++ Fertigteil: Zahnrad
++ Abstand Rohteil→Robote

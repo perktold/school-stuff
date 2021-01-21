@@ -1,0 +1,8 @@
+# bestellungen.org
+ | Best. Datum | Nachname | Vorname | Wohnort  | Kunden-Nr. | Rechnungsbetrag |
+ |-------------+----------+---------+----------+------------+-----------------|
+ |    01.09.10 | Schmitt  | Josef   | Muenchen |       1377 |           31.99 |
+ |    01.09.10 | Maier    | Marina  | Hamburg  |      19991 |          188.45 |
+ |    03.09.10 | Huber    | Hannes  | Hamburg  |        574 |           20.55 |
+ |    07.09.10 | Schmitt  | Josef   | Muenchen |       1337 |           61.99 |
+

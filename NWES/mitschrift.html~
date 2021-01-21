@@ -1,0 +1,601 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2020-12-10 Thu 16:34 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>&lrm;</title>
+<meta name="generator" content="Org mode" />
+<style type="text/css">
+ <!--/*--><![CDATA[/*><!--*/
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #ccc;
+    box-shadow: 3px 3px 3px #eee;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: visible;
+    padding-top: 1.2em;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    background-color: white;
+    top: -10px;
+    right: 10px;
+    padding: 3px;
+    border: 1px solid black;
+  }
+  pre.src:hover:before { display: inline;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { width: 90%; }
+  /*]]>*/-->
+</style>
+<link rel="stylesheet" type="text/css" href="../SWP_Holzmann/style.css" />
+<script type="text/javascript">
+/*
+@licstart  The following is the entire license notice for the
+JavaScript code in this tag.
+
+Copyright (C) 2012-2020 Free Software Foundation, Inc.
+
+The JavaScript code in this tag is free software: you can
+redistribute it and/or modify it under the terms of the GNU
+General Public License (GNU GPL) as published by the Free Software
+Foundation, either version 3 of the License, or (at your option)
+any later version.  The code is distributed WITHOUT ANY WARRANTY;
+without even the implied warranty of MERCHANTABILITY or FITNESS
+FOR A PARTICULAR PURPOSE.  See the GNU GPL for more details.
+
+As additional permission under GNU GPL version 3 section 7, you
+may distribute non-source (e.g., minimized or compacted) forms of
+that code without the copy of the GNU GPL normally required by
+section 4, provided you include this license notice and a URL
+through which recipients can access the Corresponding Source.
+
+
+@licend  The above is the entire license notice
+for the JavaScript code in this tag.
+*/
+<!--/*--><![CDATA[/*><!--*/
+ function CodeHighlightOn(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(null != target) {
+     elem.cacheClassElem = elem.className;
+     elem.cacheClassTarget = target.className;
+     target.className = "code-highlighted";
+     elem.className   = "code-highlighted";
+   }
+ }
+ function CodeHighlightOff(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(elem.cacheClassElem)
+     elem.className = elem.cacheClassElem;
+   if(elem.cacheClassTarget)
+     target.className = elem.cacheClassTarget;
+ }
+/*]]>*///-->
+</script>
+</head>
+<body>
+<div id="content">
+<div id="table-of-contents">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a href="#orgdd15638">1. Bus systeme</a>
+<ul>
+<li><a href="#orgae2ae2a">1.1. Prinzipien, die für alle Bus-Systeme gelten:</a>
+<ul>
+<li><a href="#org09673d2">1.1.1. Topologie:</a></li>
+<li><a href="#org4bfa418">1.1.2. Master/Slave oder alle Geräte gleichberechtigt</a></li>
+<li><a href="#org30513ba">1.1.3. Kollisionsvermeidung:</a></li>
+<li><a href="#orgb2d0ec2">1.1.4. Bufferung:</a></li>
+<li><a href="#orga52ba14">1.1.5. Synchronisierung:</a></li>
+<li><a href="#org84d20a9">1.1.6. Datensicherheit / Fehlerkorrigierende codes</a></li>
+</ul>
+</li>
+<li><a href="#org59a5d6c">1.2. RS232 / UART</a>
+<ul>
+<li><a href="#orgf623ab9">1.2.1. Parity-Bit:</a></li>
+<li><a href="#orgb4139e1">1.2.2. UART Zusammenfassung:</a></li>
+<li><a href="#orgad17810">1.2.3. RS232 Daisychaining</a></li>
+</ul>
+</li>
+<li><a href="#org3470702">1.3. Arbitrierung (Kollisionsvermeidung) beim CAN-Bus:</a></li>
+</ul>
+</li>
+<li><a href="#orgbd361f7">2. Finite State Machine (FSM)</a>
+<ul>
+<li><a href="#org7c5fb3d">2.1. Beispiel: Ampelversion 1</a></li>
+<li><a href="#org7e89295">2.2. Prinzipien zur Finit State Machine:</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-orgdd15638" class="outline-2">
+<h2 id="orgdd15638"><span class="section-number-2">1</span> Bus systeme</h2>
+<div class="outline-text-2" id="text-1">
+<p>
+Dienen zum Datenaustausch zwischen verschiedenen Geräten oder zwischen verschiedenen Komponenten des selben Geräts.
+</p>
+
+<p>
+verschiedene Busse haben verschiedene Anforderungen bezüglich Distanz und Übertragungsgeschwindigkeit. Grundsätzlich: je kürzer die Distanz, desdo schneller
+</p>
+
+<p>
+<a href="./../OfficeLense/2020_09_17 16_27 Office Lens.jpg">I²C Bus</a>
+</p>
+
+<p>
+2 Arten der Übertragung:
+</p>
+<ul class="org-ul">
+<li>Paralell:
+<ul class="org-ul">
+<li>mehrere zusammengehörige bits werden gleichzeitig auf mehreren Leitungen übertragen</li>
+<li>schnell aber hoher Hardwareaufwand → nur über relativ kurze Distanzen, zb innerhalb eines PC</li>
+</ul></li>
+<li>seriell:
+<ul class="org-ul">
+<li>bits werden hintereinander (seriell) auf einer Leitung geschickt</li>
+<li>langsam, niedrigerer Hardwareaufwand</li>
+</ul></li>
+</ul>
+</div>
+
+<div id="outline-container-orgae2ae2a" class="outline-3">
+<h3 id="orgae2ae2a"><span class="section-number-3">1.1</span> Prinzipien, die für alle Bus-Systeme gelten:</h3>
+<div class="outline-text-3" id="text-1-1">
+</div>
+<div id="outline-container-org09673d2" class="outline-4">
+<h4 id="org09673d2"><span class="section-number-4">1.1.1</span> Topologie:</h4>
+<div class="outline-text-4" id="text-1-1-1">
+<p>
+beschreibt, wie die einzelnen Geräte, die am Bus-System hängen, verbunden sind.
+</p>
+</div>
+
+<ol class="org-ol">
+<li><a id="org917706a"></a>Peer-to-Peer (zb UART):<br />
+<div class="outline-text-5" id="text-1-1-1-1">
+<p>
+<a href="./../OfficeLense/2020_09_17 16_55 Office Lens (1).jpg">Peer-to-Peer Bus</a>
+Nachteil: nur zwei Teilnehmer
+Vorteil: keine Addressierung nötig
+(zb serial beim Arduino
+</p>
+</div>
+</li>
+
+<li><a id="org3b55b77"></a>Linientopologien (zb CAN-Bus):<br />
+<div class="outline-text-5" id="text-1-1-1-2">
+<p>
+<a href="./../OfficeLense/2020_09_17 16_55 Office Lens (2).jpg">CAN-Bus</a>
+einfachste Möglichkeit Geräte zu verbinden, so dass jeder mit jedem Kommunizieren kann
+Nachteil: unterbrechung an einer Stelle führt zu Kommunikationsunterbrechung -&gt; Umbauen des Systems im laufenden Betrieb nicht möglich
+</p>
+</div>
+</li>
+
+<li><a id="org12e28fe"></a>Ringtopologie:<br />
+<div class="outline-text-5" id="text-1-1-1-3">
+<p>
+<a href="./../OfficeLense/2020_09_17 17_11 Office Lens.jpg">Ring-Bus</a>
+Vorteil: Umbauen des Systems im laufenden Betriebs möglich
+</p>
+</div>
+</li>
+
+<li><a id="org8f63d18"></a>Baumtopologie:<br />
+<div class="outline-text-5" id="text-1-1-1-4">
+<p>
+<a href="../OfficeLense/2020_09_17 17_34 Office Lens (1).jpg">Baum-Bus</a>
+Vorteil: die Kommunikation in einem untersystem blockiert die Kommunikation in einem anderen Untersystem nicht.
+</p>
+</div>
+</li>
+
+<li><a id="orga1fb20a"></a>Sterntopologie:<br />
+<div class="outline-text-5" id="text-1-1-1-5">
+<p>
+<a href="../OfficeLense/2020_09_17 17_34 Office Lens (2).jpg">Stern-Bus</a>
+Nachteil: Peripheriegeräte können nur über Zentralgerät kommunizieren, was oft aber gar nicht nötig ist.
+Beispiel: PC als Zentralknoten, Maus, Tastatur, etc als Peripheriegeräte (duh)
+</p>
+
+<p>
+Nachteil bei Linien- und Ringtopologien: wenn ein Teilnehmer sendet, ist der Bus blockiert.
+</p>
+</div>
+</li>
+</ol>
+</div>
+
+<div id="outline-container-org4bfa418" class="outline-4">
+<h4 id="org4bfa418"><span class="section-number-4">1.1.2</span> Master/Slave oder alle Geräte gleichberechtigt</h4>
+<div class="outline-text-4" id="text-1-1-2">
+<p>
+Entweder ein Master-gerät steuert welches Gerät zu einem bestimmten Zeitpunkt senden darf, oder jedes der gleichberechtigten Geräte kann selbstständig zu senden beginnen
+</p>
+
+<ul class="org-ul">
+<li>Master slave beispiel: I²C</li>
+<li>alle Gleichberechtigt: CAN</li>
+</ul>
+
+<p>
+Bei gleichberechtigten Systemen benötigt der Bus ein Verfahren zur 
+</p>
+</div>
+</div>
+
+<div id="outline-container-org30513ba" class="outline-4">
+<h4 id="org30513ba"><span class="section-number-4">1.1.3</span> Kollisionsvermeidung:</h4>
+<div class="outline-text-4" id="text-1-1-3">
+<p>
+Wenn mehrere Geräte zugleich zu senden beginnen, muss klar sein, welches Gerät Priorität hat. Die anderen Geräte müssen bemerken, dass ein Gerät mit höherer Priorität sendet und ihre Übertragung abbrechen
+</p>
+
+<p>
+Bei mehreren Geräten erhält jedes eine andere Adresse, diese Adresse wird mit den Daten mitgeschickt
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgb2d0ec2" class="outline-4">
+<h4 id="orgb2d0ec2"><span class="section-number-4">1.1.4</span> Bufferung:</h4>
+<div class="outline-text-4" id="text-1-1-4">
+<p>
+jedes Gerät benötigt einen Zwischenspeicher für empfangene Daten (=&gt; Buffer), der vom Gerät ausgelesen wird, sobald es Zeit dazu hat
+</p>
+</div>
+</div>
+
+<div id="outline-container-orga52ba14" class="outline-4">
+<h4 id="orga52ba14"><span class="section-number-4">1.1.5</span> Synchronisierung:</h4>
+<div class="outline-text-4" id="text-1-1-5">
+<p>
+Eine Abfolge von 1en wird vom Sender als durchgehendes HIGH-Signal übertragen =&gt; damit Empfänger weiß, wie viele 1en das sind, muss festgelegt werden, wann das nächste gültige Datenbit anliegt.
+</p>
+
+<p>
+Erste Möglichkeit (UART): jedes Bit hat eine fest definierte Dauer.
+</p>
+
+<p>
+Problem: leicht unterschiedlich schnelle uhren in Empfänger und Sender =&gt; müssen regelmäßig synchronisiert werden. Bei der UART dient dafür die fallende Flanke des Start-Bit
+</p>
+
+<p>
+Zweite Möglichkeit (I²C Bus): eigene Taktleitung zusätzlich zur Datenleitung im Kabel
+</p>
+</div>
+</div>
+
+<div id="outline-container-org84d20a9" class="outline-4">
+<h4 id="org84d20a9"><span class="section-number-4">1.1.6</span> Datensicherheit / Fehlerkorrigierende codes</h4>
+<div class="outline-text-4" id="text-1-1-6">
+<p>
+Ein einzelner Übertragungsfehler entspricht einem Bit, das zwichen Sender und Empfänger verändert wurde
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org59a5d6c" class="outline-3">
+<h3 id="org59a5d6c"><span class="section-number-3">1.2</span> RS232 / UART</h3>
+<div class="outline-text-3" id="text-1-2">
+<p>
+Universal Asynchronous Receive / Transmit
+</p>
+
+<p>
+<a href="../OfficeLense/2020_09_24 16_33 Office Lens.jpg">RS232</a>
+</p>
+
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<tbody>
+<tr>
+<td class="org-left">RX:</td>
+<td class="org-left">Recieve</td>
+</tr>
+
+<tr>
+<td class="org-left">Tx:</td>
+<td class="org-left">Transmit</td>
+</tr>
+</tbody>
+</table>
+
+<p>
+<a href="http://de.wikipedia.org/wiki/EIA-232">http://de.wikipedia.org/wiki/EIA-232</a>
+</p>
+
+<p>
+1 Baud: 1 bit/s
+</p>
+
+<p>
+zB: bei 9600baud dauert ein bit 1/9600 sekunden
+</p>
+
+<p>
+1011 = 11(dec) = $b <br />
+1101 = 13(dec) = $d
+</p>
+</div>
+
+<div id="outline-container-orgf623ab9" class="outline-4">
+<h4 id="orgf623ab9"><span class="section-number-4">1.2.1</span> Parity-Bit:</h4>
+<div class="outline-text-4" id="text-1-2-1">
+<p>
+Dient dazu, dass der Empfänger eine <b>ungerade</b> Anzahl an übertragungsfehlern in einem zeichen erkennt. Er kann diesen Fehler allerdings nicht korrigieren. Sender und Empfänger vereinbaren dass die Anzahl der Einsen in den Datenbits + Parity-Bit ungerade sein muss, Parity-Bit wird je nach Bedarf vom Sender auf 1 oder 0 gesetzt.
+</p>
+
+<p>
+Was bring das Parity-Bit? Wenn zB bei jedem 1000sten übertragenen char ein Bit fehler auftritt, der ohne Parity nicht erkannt wird, entspricht das einem Fehler pro Seite ASCII. Mit Parity-Bit: jedes Tausendste jeder fehlerhaften chars enthält ein zweites fehlerhaftes Bit, welches nicht erkannt wird =&gt; ein Bit fehler pro 1 000 000 char =&gt; ein fehler alle 1000 Seiten.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgb4139e1" class="outline-4">
+<h4 id="orgb4139e1"><span class="section-number-4">1.2.2</span> UART Zusammenfassung:</h4>
+<div class="outline-text-4" id="text-1-2-2">
+<ul class="org-ul">
+<li>Nur zwei Gesprächsteilnehmer → keine Addressierung nötig</li>
+<li>Für jede übertragungsrichtung eigene Leitung → Kollisionsvermeidung unnötig</li>
+<li>Synchronisierung erfolgt über fixe Baudrate / Bitdauer und fallende Flanke des Startbit</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-orgad17810" class="outline-4">
+<h4 id="orgad17810"><span class="section-number-4">1.2.3</span> RS232 Daisychaining</h4>
+<div class="outline-text-4" id="text-1-2-3">
+<p>
+zwischen je zwei Geräten besteht eine <a href="../OfficeLense/2020_10_08 16_32 Office Lens (1).jpg">Peer to Peer Verbindung</a>, es gibt keinen Gesamtbus. Jedes Gerät gibt Informationen, die für ein anderes Gerät bestimmt sind, von einer UART an die nächste weiter. Dazu notwendig: Jedes Gerät erhält eine Adresse, mit dem Befehl wird die Adresse des Geräts mitgeschickt, an das der Befehl gerichtet ist. Diese Adresse ist nicht für die einzelne UART, sondern für die ganze <a href="../OfficeLense/2020_10_08 16_32 Office Lens (2).jpg">Daisychain</a>.
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org3470702" class="outline-3">
+<h3 id="org3470702"><span class="section-number-3">1.3</span> Arbitrierung (Kollisionsvermeidung) beim CAN-Bus:</h3>
+<div class="outline-text-3" id="text-1-3">
+<p>
+Grundsätzlich fängt kein Gerät an zu schreiben, während ein anderes Gerät schreibt, sondern wartet das Ende der Nachricht ab. Wenn zwei Geräte zugleich zu schreiben beginnen: 
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-orgbd361f7" class="outline-2">
+<h2 id="orgbd361f7"><span class="section-number-2">2</span> Finite State Machine (FSM)</h2>
+<div class="outline-text-2" id="text-2">
+<p>
+Eigenes Programmierprinzip mit folgenden Vorteilen:
+</p>
+
+<ul class="org-ul">
+<li>Erweiterbarkeit</li>
+</ul>
+<p>
+Erweiterbarkeit von Programmen, ohne den Code komplizierter zu machen
+</p>
+
+<ul class="org-ul">
+<li>Graphische Planung und Dokumentation</li>
+</ul>
+</div>
+
+<div id="outline-container-org7c5fb3d" class="outline-3">
+<h3 id="org7c5fb3d"><span class="section-number-3">2.1</span> Beispiel: Ampelversion 1</h3>
+<div class="outline-text-3" id="text-2-1">
+<p>
+Amepel an einem Fußgängerübergang, wir programmieren nur die Autoampel, da die Fußgängerampel sowieso gegengleich geschaltet wird.
+</p>
+
+<p>
+Die ampel soll 5 Sekunden rot sein und dann für 10 Sekunden auf grün schalten.
+<a href="../OfficeLense/2020_12_10 16_10 Office Lens (1).jpg">Schema</a>
+</p>
+
+<p>
+Um festzustellen ob die Zeit abgelaufen ist, müssen wir uns den Startzeitpunkt des jeweiligen Zeitraums merken =&gt; dieses Festlegen einer Variable ist eine eigene Bubble
+<a href="../OfficeLense/2020_12_10 16_10 Office Lens (2).jpg">Schema</a> (TODO: rotate this, lol)
+</p>
+</div>
+</div>
+
+<div id="outline-container-org7e89295" class="outline-3">
+<h3 id="org7e89295"><span class="section-number-3">2.2</span> Prinzipien zur Finit State Machine:</h3>
+<div class="outline-text-3" id="text-2-2">
+<ol class="org-ol">
+<li>jeder Zustand ist eine eigene Bubble und wird als eigene Methode programmiert</li>
+<li>jeder Übergang zwischen zwei Zuständen ist an eine Bedingung geknüpft =&gt; if-statement</li>
+<li>Zustand wird in einer Globalen Variable gespeichert</li>
+<li>in der loop ist ein switch(zustand) dass die richtige Methode aufgerufen wird.</li>
+</ol>
+</div>
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="date">Created: 2020-12-10 Thu 16:34</p>
+<p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
+</div>
+</body>
+</html>

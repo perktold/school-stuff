@@ -1,0 +1,1548 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2020-10-08 Thu 11:48 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>&lrm;</title>
+<meta name="generator" content="Org mode" />
+<meta name="author" content="Felix Perktold" />
+<style type="text/css">
+ <!--/*--><![CDATA[/*><!--*/
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #ccc;
+    box-shadow: 3px 3px 3px #eee;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: visible;
+    padding-top: 1.2em;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    background-color: white;
+    top: -10px;
+    right: 10px;
+    padding: 3px;
+    border: 1px solid black;
+  }
+  pre.src:hover:before { display: inline;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { width: 90%; }
+  /*]]>*/-->
+</style>
+<script type="text/javascript">
+/*
+@licstart  The following is the entire license notice for the
+JavaScript code in this tag.
+
+Copyright (C) 2012-2020 Free Software Foundation, Inc.
+
+The JavaScript code in this tag is free software: you can
+redistribute it and/or modify it under the terms of the GNU
+General Public License (GNU GPL) as published by the Free Software
+Foundation, either version 3 of the License, or (at your option)
+any later version.  The code is distributed WITHOUT ANY WARRANTY;
+without even the implied warranty of MERCHANTABILITY or FITNESS
+FOR A PARTICULAR PURPOSE.  See the GNU GPL for more details.
+
+As additional permission under GNU GPL version 3 section 7, you
+may distribute non-source (e.g., minimized or compacted) forms of
+that code without the copy of the GNU GPL normally required by
+section 4, provided you include this license notice and a URL
+through which recipients can access the Corresponding Source.
+
+
+@licend  The above is the entire license notice
+for the JavaScript code in this tag.
+*/
+<!--/*--><![CDATA[/*><!--*/
+ function CodeHighlightOn(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(null != target) {
+     elem.cacheClassElem = elem.className;
+     elem.cacheClassTarget = target.className;
+     target.className = "code-highlighted";
+     elem.className   = "code-highlighted";
+   }
+ }
+ function CodeHighlightOff(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(elem.cacheClassElem)
+     elem.className = elem.cacheClassElem;
+   if(elem.cacheClassTarget)
+     target.className = elem.cacheClassTarget;
+ }
+/*]]>*///-->
+</script>
+</head>
+<body>
+<div id="content">
+<div id="table-of-contents">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a href="#staatsvolk-staatsgewalt-staatsgebiet">1. Staatsvolk Staatsgewalt Staatsgebiet</a></li>
+<li><a href="#org22596e1">2. <b>Stufenbau der Rechtsordnung (S.11)</b></a></li>
+<li><a href="#orgcb5d1bd">3. <b>Grund und Freiheitsrechte</b></a></li>
+<li><a href="#org1217fff">4. <b>Kontrolle der Staatsgewalt</b></a></li>
+<li><a href="#orga82df05">5. <b>Arten des Rechts</b></a></li>
+<li><a href="#orgb1a7aa6">6. <b>Gesetzgebung</b></a>
+<ul>
+<li><a href="#org03b61aa">6.1. <b>Wahlrechtsgrundsätze :</b></a></li>
+</ul>
+</li>
+<li><a href="#orgaa05bfb">7. <b>Verwaltung</b></a></li>
+<li><a href="#org58ce120">8. <b>Gerichtsbarkeit S.226</b></a></li>
+</ul>
+</div>
+</div>
+<p>
+<b>I Das österreichische Rechtssystem und die Bundesverfassung</b>
+</p>
+
+<p>
+Das <b>Rechtssystem</b> regelt das Zusammenleben der Menschen in der
+Gemeinschaft. Diese Regeln werden in Form von Gesetzen beschlossen,
+niedergeschrieben und veröffentlicht.
+</p>
+
+<ul class="org-ul">
+<li>Für wen gelten die Gesetze? Für jede PErson auf
+Staatsgebiet<img src="media/image1.png" alt="image1.png" /></li>
+
+<li>Muss man Gesetze gelesen haben, dass sie für einen gelten? Nein</li>
+
+<li>Wo kann man sie nachlesen? www.ris.bka.gv.at</li>
+</ul>
+
+<p>
+Die <b>Verfassung</b> ist die oberste Rechtsgrundlage innerhalb eines
+Staates. Sie enthält die grundsätzlichen Regelungen über die Form des
+Staates und die Form der Beziehungen zwischen Staat und Bürger. Sie
+stellt somit die Grundlage der staatlichen Ordnung dar und kann nur
+durch Verfassungsgesetze aufgehoben, geändert oder ergänzt werden.
+</p>
+
+<p>
+Die österreichische Verfassung in der heutigen Form stammt aus 1920/1929
+von Hans Kelsen.
+</p>
+
+<p>
+<b>Staat</b>
+</p>
+
+<div id="outline-container-org11c7d5c" class="outline-2">
+<h2 id="staatsvolk-staatsgewalt-staatsgebiet"><span class="section-number-2">1</span> Staatsvolk Staatsgewalt Staatsgebiet</h2>
+<div class="outline-text-2" id="text-staatsvolk-staatsgewalt-staatsgebiet">
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left"><b>Gesetzgebung</b></th>
+<th scope="col" class="org-left"><b>Verwaltung</b></th>
+<th scope="col" class="org-left"><b>Gerichtsbarkeit (ludikative)</b></th>
+<th scope="col" class="org-left">&#xa0;</th>
+</tr>
+
+<tr>
+<th scope="col" class="org-left">&#xa0;</th>
+<th scope="col" class="org-left">&#xa0;</th>
+<th scope="col" class="org-left">&#xa0;</th>
+<th scope="col" class="org-left">&#xa0;</th>
+</tr>
+
+<tr>
+<th scope="col" class="org-left"><b>(Legislative)</b></th>
+<th scope="col" class="org-left"><b>(Exekutive)</b></th>
+<th scope="col" class="org-left">&#xa0;</th>
+<th scope="col" class="org-left">&#xa0;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left"><b>Bundes-</b></td>
+<td class="org-left"><b>Landes-</b></td>
+<td class="org-left">Ausführung der Gesetze</td>
+<td class="org-left">Rechtsprechung</td>
+</tr>
+
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left"><b>Gesetzgebung</b></td>
+<td class="org-left"><b>Gesetzgebung</b></td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left">Gilt</td>
+<td class="org-left">Gilt</td>
+<td class="org-left">Zuständigkeit:</td>
+<td class="org-left">weisungsfreie</td>
+</tr>
+
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left">in Österrreich</td>
+<td class="org-left">im jeweiligen Land</td>
+<td class="org-left">Bundes-/Landesregierung</td>
+<td class="org-left">zuständigkeit-weisungsfreie</td>
+</tr>
+
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left">Zuständigkeit:</td>
+<td class="org-left">Zuständigkeit:</td>
+<td class="org-left">unterstützt durch weisungsgebundene Beamte</td>
+<td class="org-left">Richter</td>
+</tr>
+
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left">Nationalrat</td>
+<td class="org-left">Landtag</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+</tbody>
+</table>
+
+<p>
+Der <b>Staat</b> ist ein Zusammenschluss von Menschen mit Herrschaftsgewalt
+und gliedert sich in die 3 Elemente:
+</p>
+
+<ul class="org-ul">
+<li><b>Staatsvolk (National people):</b> Das Staatsvolk im engeren Sinne bilden
+die Staatsbürger. Zum Staatsvolk im weiteren Sinne zählen auch Fremde
+(Ausländer, Staatenlose), die sich auf dem Staatsgebiet aufhalten.</li>
+
+<li><b>Staatsgebiet (National Territory):</b> Unter Staatsgebiet versteht man
+jenes Gebiet, das der jeweiligen Staatsgewalt unterworfen ist. Dazu
+zählen:</li>
+
+<li><blockquote>
+<p>
+Erdoberfläche: innerhalb der Grenzen sowie der darüber befindliche
+Luftraum und das Erdinnere.
+</p>
+</blockquote></li>
+
+<li><blockquote>
+<p>
+Küstenmeer: bei an Meer grenzenden Staaten (12-Meilen-Zone = ca.
+22km)
+</p>
+</blockquote></li>
+
+<li><blockquote>
+<p>
+Botschaften: Exterritorialität
+</p>
+</blockquote></li>
+</ul>
+
+<blockquote>
+<p>
+Der Weltraum und das freie Meer gehören keinem Staat und daher allen
+Staaten zur Benützung freigegeben.
+</p>
+</blockquote>
+
+<ul class="org-ul">
+<li><b>Staatsgewalt (&#x2026;&#x2026;&#x2026;&#x2026;&#x2026;&#x2026;&#x2026;&#x2026;&#x2026;&#x2026;&#x2026;&#x2026;&#x2026;&#x2026;.)</b>: Die
+Staatsgewalt ist eine bestimmte Ordnung des Staates. Diese ist in der
+Verfassung geregelt und gliedert sich in</li>
+
+<li><blockquote>
+<p>
+<span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline">_</span></span></span></span></span></span></span></span></span></span></span></span></span></span></span>
+(&#x2026;&#x2026;&#x2026;&#x2026;&#x2026;&#x2026;&#x2026;&#x2026;&#x2026;&#x2026;&#x2026;&#x2026;&#x2026;.)
+</p>
+</blockquote></li>
+
+<li><blockquote>
+<p>
+<span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline">_</span></span></span></span></span></span></span></span></span></span></span></span></span></span></span>
+(&#x2026;&#x2026;&#x2026;&#x2026;&#x2026;&#x2026;&#x2026;&#x2026;&#x2026;&#x2026;&#x2026;&#x2026;&#x2026;.)
+</p>
+</blockquote></li>
+
+<li>#+BEGIN<sub>QUOTE</sub>
+  <span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline">_</span></span></span></span></span></span></span></span></span></span></span></span></span></span></span>
+  (&#x2026;&#x2026;&#x2026;&#x2026;&#x2026;&#x2026;&#x2026;&#x2026;&#x2026;&#x2026;&#x2026;&#x2026;&#x2026;.)</li>
+
+<li><b>Prinzip der Gewaltenteilung</b>: Die 3 Staatsgewalten sollen
+voneinander unabhängig sein und sich gegenseitig kontrollieren.
+Machtkonzentrationen sollen verhindert werden. Justiz und Verwaltung
+sind bundesverfassungsrechtlich in allen Instanzen getrennt.</li>
+</ul>
+
+<p>
+<b>Die Rolle der Medien:</b> Eine nicht unwesentliche Rolle bei der
+Verteilung der staatlichen Macht spielen die <b>Medien</b>, von vielen
+deshalb als <b>4. Staatsgewalt</b> bezeichnet, obwohl sie definitionsgemäß
+natürlich keine Gewalt, sondern allenfalls Einfluss haben. Ihr
+faktischer Einfluss darf aber nicht unterschätzt werden, sind doch die
+Parteien insb. bei der Wahlwerbung maßgeblich von den Medien abhängig.
+Umgekehrt wird auch immer wieder versucht, die Medien wirtschaftlich
+unter Kontrolle zu bringen und damit den freien Journalismus
+einzuschränken. Welche Rolle spielen dabei neue Netzwerke wie Facebook
+oder Twitter?
+</p>
+
+<p>
+Rechtlich gesehen ist der Staat eine
+juristische Person, die durch ihre
+verfassungsmäßigen Organe handlungsfähig ist.
+</p>
+
+<p>
+Die staatliche <b>Souveränität</b> bedeutet, dass der Staat seine
+Angelegenheiten im Inneren und seine Beziehungen nach außen selbst
+regelt. Kein fremder Staat darf Herrschaftsrechte ausüben. Dies ist
+jedoch durch die EU abgeschwächt.
+</p>
+
+<p>
+Die Beziehungen zwischen den verschiedenen Staaten untereinander regelt
+das <b>Völkerrecht.</b> S.4.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org22596e1" class="outline-2">
+<h2 id="org22596e1"><span class="section-number-2">2</span> <b>Stufenbau der Rechtsordnung (S.11)</b></h2>
+<div class="outline-text-2" id="text-2">
+<p>
+Grundprinzipien der Verfassung / Fundamental Principles 
+EU Recht / EU Law 
+Bundesverfassungsgesetze / Constitutional law 
+Bundesgesetze / federal law 
+Verordnung / Legal ordinance 
+</p>
+
+
+<p>
+Jede Rechtsnorm darf den darüber stehenden Rechtsnormen nicht
+widersprechen.
+</p>
+
+
+<p>
+Die <b>Grundprinzipien der Bundesverfassung</b> können nur durch Volksabstimmungen geändert werden
+</p>
+
+<p>
+Das <b>EU-Recht</b> wird vom EU-Parlament beschlossen und hat <b>Anwendungsvorrang</b> Es ist eigentlich
+nicht übergeordnet, allerdings dürfen die innerstaatlichen Maßnahmen dem
+EU-Recht nicht widersprechen. Es wird vom EU-Parlament beschlossen.
+</p>
+
+<p>
+<b>Bundesverfassungsgesetze</b>
+Wird vom Nationalrat mit 66% Mehrheit beschlossen, wobei die Hälfte der Abgeordneten anwesend sein muss
+</p>
+
+<p>
+<b>Bundesgesetze</b>
+Wird vom Nationalrat mit 50% Mehrheit beschlossen, wobei 33% der Abgeordneten anwesend sein muss
+</p>
+
+<p>
+<b>Verordnungen</b>
+Werden innerhalb von wirkungsbereich erlassen
+</p>
+
+<p>
+<b>Grundprinzipien der österreichischen Bundesverfassung</b>
+</p>
+
+<p>
+Österreich = parlamentarische, mittelbare demokratische Republik
+</p>
+
+<ul class="org-ul">
+<li><b>Demokratisches Prinzip (Democrativ principle) Die
+*Regierungsform</b> gibt Auskunft darüber, auf welche Weise und durch wen
+ein Staat regiert wird, und wie die regierenden Organe an die
+Regierungsposition gelangen. Österreich ist eine Demokratie.
+(Gegensatz: Diktatur)
+
+<ul class="org-ul">
+<li>Volk ist Staatsgewalt</li>
+
+<li>alle Bürger sind vor dem Staat gleich</li>
+
+<li>das Volk hat das Recht der politischen Mitbestimmung =&gt; freie Wahlen</li>
+
+<li>Grund und Freiheitsrechte (Liberales prinzip)</li>
+</ul></li>
+
+<li><p>
+<b>Republikanisches Prinzip
+(Republican principle) Die *Staatsform</b> gibt
+Auskunft darüber, wer an der Spitze des Staates steht, und wie er dort
+hinkommt. <img src="media/image2.png" alt="image2.png" />
+</p>
+
+<p>
+Österreich ist eine Republik und an der Spitze steht ein *auf
+bestimmte Zeit vom Staatsvolk gewähltes Staatsoberhaupt
+(Bundespräsident).* Er ist <b>dem Volk</b> gegenüber politisch und
+rechtlich <b>verantwortlich</b>, und <b>kann</b> daher vorzeitig <b>abgesetzt
+werden</b>. (Gegensatz; Monarchie: an der Spitze steht Monarch,der in der
+Regel durch Erbfolge auf Lebenszeit, ohne Zutun des Staatsvolkes
+regiert, er ist dem Volk gegenüber nicht verantwortlich, er ist daher
+unabsetzbar.)
+</p></li>
+</ul>
+
+
+<ul class="org-ul">
+<li><b>Bundesstaatliches Prinzip
+(Federal principle):</b></li>
+
+<li>Die Ausübung der Staatsgewalt ist zwischen Bund und Ländern aufgeteilt</li>
+
+<li>die Länder haben eigene Landesverfassungen</li>
+
+<li>Mitwirkung der Bundesländer an der Bundesgesetzgebung durch den Bundesrat</li>
+</ul>
+
+
+<ul class="org-ul">
+<li><b>Rechtsstaatliches Prinzip
+(Legality principle):</b></li>
+
+<li>Die Verfassung ist die Grundlage auf der alle Gesetze aufgebaut sind</li>
+
+<li>Dem einzelnen ist der Schutz vor Staatlicher willkür garantiert</li>
+
+<li>Die Staatsgewalt ist durch die Bindung an das Recht beschränkt</li>
+
+<li>Kontrolle der Staatlichen organe und ihrer Tätigkeit</li>
+</ul>
+
+
+<p>
+<b>Legalitätsprinzip</b> Die staatliche Verwaltung darf nur aufgrund der
+Gesetze ausgeübt werden, es darf keine Willkür geben. (im Gegensatz
+zu einem Polizeistaat)
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgcb5d1bd" class="outline-2">
+<h2 id="orgcb5d1bd"><span class="section-number-2">3</span> <b>Grund und Freiheitsrechte</b></h2>
+<div class="outline-text-2" id="text-3">
+<p>
+Die Grund- u. Freiheitsrechte haben das Ziel für den einzelnen Bürger
+einen Freiheitsbereich zu schaffen und den Schutz vor Eingriffen des
+Staates in die höchst persönliche Privatsphäre durch Gesetzgebung oder
+Vollziehung zu gewährleisten (= <b>liberales Prinzip</b>)
+</p>
+
+<ul class="org-ul">
+<li>Gleichheit vor dem Gesetz</li>
+
+<li>Glaubensfreiheit</li>
+
+<li>Meinungsfreiheit und Pressefreiheit</li>
+
+<li>Unverletzlichkeit des Hausrechtes
+(hausdurchsuchung nur mit durchsuchungsbefehl / gefahr im verzug)</li>
+
+<li>Schutz der persönlichen Freiheit
+(keine festnahme ohne richterlichen befehl)</li>
+
+<li>Unverletzlichkeit des Eigentums
+(enteignungen nur in gesetzlich geregelten fällen)</li>
+
+<li>Anspruch auf den gesetzlich zuständigen Richter, ein ordentliches
+Gerichtsverfahren, Verbot von Folter</li>
+
+<li>Vereins- u. Versammlungsfreiheit</li>
+</ul>
+
+
+<ul class="org-ul">
+<li>Recht auf Datenschutz
+geheimhaltung personenbezogener daten</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org1217fff" class="outline-2">
+<h2 id="org1217fff"><span class="section-number-2">4</span> <b>Kontrolle der Staatsgewalt</b></h2>
+<div class="outline-text-2" id="text-4">
+<ul class="org-ul">
+<li>Verfassungsgerichtshof:
+<span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline">_</span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></li>
+
+<li>Verwaltungsgerichtshof:
+Kontrolle der Verwaltung</li>
+
+<li>Volksanwaltschaft:</li>
+</ul>
+
+
+<ul class="org-ul">
+<li>Rechnungshof:
+untersteht direkt dem nationalrat und prüft die finanzen von Bund, ländern, gemeinden und deren beteiligungen an unternehmen</li>
+
+<li>Kontrolle der Gerichtsbarkeit
+obeste instanz: oberster Gerichtshof</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-orga82df05" class="outline-2">
+<h2 id="orga82df05"><span class="section-number-2">5</span> <b>Arten des Rechts</b></h2>
+<div class="outline-text-2" id="text-5">
+<p>
+<b>Generelles &#x2013; individuelles Recht</b>
+</p>
+
+<ul class="org-ul">
+<li><b>Generelles</b> Recht</li>
+</ul>
+<p>
+Gesetze
+</p>
+
+<p>
+<b>Materielles &#x2013; Formelles Recht</b>
+</p>
+<ul class="org-ul">
+<li><b>Materielles</b> Recht</li>
+</ul>
+<p>
+Regelt das Verhalten vom Menschen in inhaltlicher Beziehung, zB Diebstahl
+</p>
+
+<ul class="org-ul">
+<li><b>Formelles</b> Recht</li>
+</ul>
+<p>
+Heißt Verfahrensrecht, das heißt es geht um die Art und den Weg der Rechtsdurchsetzung, zB den Strafprozess, in dem der Diebstahl bestraft wird
+</p>
+
+<p>
+<b>Zwingendes &#x2013;Nachgiebiges Recht (s. 5)</b>
+</p>
+
+<ul class="org-ul">
+<li><b>Zwingendes</b> (cognitives) Recht</li>
+</ul>
+<p>
+Ist undabdingbar und kann durch die am Rechtsverhältnis beteiligten nicht verändert werden 
+zB man kann keine Ehe auf Zeit schließen
+</p>
+
+<ul class="org-ul">
+<li><b>Nachgiebiges</b> (dispositives) Recht ist abdingbar und kann von den beteiligten durch eine Abmachung geändert werden,</li>
+</ul>
+<p>
+zB Zahlungsart beim Kaufvertrag
+</p>
+
+<p>
+<b>spezielles - allgemeines Gesetz (Lex specialis vs lex generalis)</b>
+Ein Allgemeines Gesetz hat nur insofern Gültigkeit, als es kein spezielles Gesetz gibt, zb ABGB (Allgemeines Bürgerliches Gesetzbuch)
+spezielle gesetze greifen immer, zB E-Commerze Gesetz
+</p>
+
+<p>
+<b>Demonstrative (beispielhaft)&#x2013; taxative (allumfassend) Aufzählungen</b>
+Demonstrative Aufzählungen sind Beispielhaft und werden durch "zB", "insbesondere", "unter anderem", etc. eingeleitet
+Taxative Aufzählungen sind allumfassend (exhaustive) und dürfen nicht ergänzt werden. Fehlen die Einleitungsworte einer Demonstrativen Aufzählung, ist von einer taxativen auszugehen
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgb1a7aa6" class="outline-2">
+<h2 id="orgb1a7aa6"><span class="section-number-2">6</span> <b>Gesetzgebung</b></h2>
+<div class="outline-text-2" id="text-6">
+</div>
+<div id="outline-container-org03b61aa" class="outline-3">
+<h3 id="org03b61aa"><span class="section-number-3">6.1</span> <b>Wahlrechtsgrundsätze :</b></h3>
+<div class="outline-text-3" id="text-6-1">
+<ul class="org-ul">
+<li>Allgemeines Wahlrecht (Universal suffrage):</li>
+</ul>
+<p>
+alle männlichen und weiblichen staatsbürger dürfen, sofern sie das wahlalter erreicht haben und kein wahlausschlussgrund vorliegt, 
+</p>
+
+<ul class="org-ul">
+<li>Aktives Wahlrecht:</li>
+</ul>
+<p>
+Vollendung des 16. Lebensjahres am Tag der Wahl
+</p>
+
+<ul class="org-ul">
+<li>Passives Wahlrecht:</li>
+</ul>
+<p>
+Vollendung des 18. Lebensjahres am Tag der Wahl
+</p>
+
+<ul class="org-ul">
+<li>Gleiches Wahlrecht (equal suffrage):</li>
+</ul>
+<p>
+Unabhängig von den persönlichen Umständen des Wählers
+</p>
+
+<ul class="org-ul">
+<li>Direktes Wahlrecht (direct suffrage):</li>
+</ul>
+<p>
+Es wird unmittelbar ein Kandidat oder eine Partei gewählt
+</p>
+
+<ul class="org-ul">
+<li>Geheimes Wahlrecht (secret ballout):</li>
+</ul>
+<p>
+Wahlkabinen, Wahrlurnen, Blickdichte Kuverts, Wahlsprengel mit entsprechender Größe
+</p>
+
+<ul class="org-ul">
+<li>Freies Wahlrecht (free suffrage):</li>
+</ul>
+<p>
+Stimmabgabe erfolgt ohne Einflussnahme. Es darf keine Konsequenzen für die Wahl geben aufgrund der politischen Überzeug und damit der Stimmabgabe geben.
+</p>
+
+<ul class="org-ul">
+<li>Persönliches Wahlrecht (personal suffrage):</li>
+</ul>
+
+<p>
+*Briefwahl:
+<span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline">_</span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span>
+_______________________________________________________________________________<sub>*</sub>
+</p>
+
+<ol class="org-ol">
+<li><blockquote>
+<p>
+<b>Wahlverfahren (&#x2026;&#x2026;&#x2026;&#x2026;&#x2026;&#x2026;&#x2026;&#x2026;&#x2026;&#x2026;&#x2026;&#x2026;&#x2026;&#x2026;&#x2026;):</b>
+</p>
+</blockquote></li>
+
+<li>Verhältniswahlrecht
+(&#x2026;&#x2026;&#x2026;&#x2026;&#x2026;&#x2026;&#x2026;&#x2026;&#x2026;&#x2026;&#x2026;&#x2026;&#x2026;&#x2026;&#x2026;&#x2026;&#x2026;&#x2026;&#x2026;&#x2026;&#x2026;..)
+<span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline">_</span></span></span></span></span></span></span></span></span>
+<span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline">__</span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span>
+<span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline">__</span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></li>
+
+<li>Mehrheitswahlrecht
+(&#x2026;&#x2026;&#x2026;&#x2026;&#x2026;&#x2026;&#x2026;&#x2026;&#x2026;&#x2026;&#x2026;&#x2026;&#x2026;&#x2026;&#x2026;&#x2026;&#x2026;&#x2026;&#x2026;..)
+<span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline">_</span></span></span></span></span></span></span></span></span></span></span>
+<span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline">__</span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span>
+<span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline">__</span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span>
+
+<ol class="org-ol">
+<li><blockquote>
+<p>
+<b>Instrumente der direkten Demokratie:</b>
+</p>
+</blockquote></li>
+</ol></li>
+
+<li>Volksabstimmung:
+<span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline">_</span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span>
+<span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline">__</span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></li>
+
+<li>Volksbegehren:
+<span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline">_</span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></li>
+</ol>
+
+<blockquote>
+<p>
+<span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline">__</span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span>
+</p>
+</blockquote>
+
+<ul class="org-ul">
+<li>Volksbefragung:
+<span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline">__</span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span>
+<span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline">__</span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span>
+
+<ol class="org-ol">
+<li><blockquote>
+<p>
+<b>Nationalrat
+(&#x2026;&#x2026;&#x2026;&#x2026;&#x2026;&#x2026;&#x2026;&#x2026;&#x2026;&#x2026;&#x2026;&#x2026;&#x2026;&#x2026;&#x2026;&#x2026;&#x2026;&#x2026;):</b>
+</p>
+</blockquote></li>
+</ol></li>
+
+<li>Abgeordnete/Mandatare <span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline">__</span></span></span></span></span></li>
+
+<li>Legislaturperiode von <b><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline">__</span></span></span></span></span></span></b>, Verkürzung des Zeitraums
+durch:</li>
+
+<li><blockquote>
+<p>
+Selbstauflösung des Nationalrates
+</p>
+</blockquote></li>
+
+<li><blockquote>
+<p>
+Auflösung durch den Bundespräsidenten auf Vorschlag der
+Bundesregierung
+</p>
+</blockquote></li>
+
+<li><blockquote>
+<p>
+Automatische Auflösung, wenn auf Veranlassung des Nationalrates die
+Bundesversammlung eine Volksabstimmung zur Absetzung des
+Bundespräsidenten verlangt hat und das Volk diese Absetzung ablehnt.
+</p>
+</blockquote></li>
+
+<li>Immunität der Abgeordneten:</li>
+</ul>
+
+<blockquote>
+<p>
+Berufliche Immunität
+<span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline">_</span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span>
+<span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline">__</span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span>
+<span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline">__</span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span>
+</p>
+
+<p>
+Außerberufliche Immunität
+<span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline">__</span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span>
+<span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline">__</span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span>
+</p>
+</blockquote>
+
+<ul class="org-ul">
+<li>freies Mandat
+<span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline">__</span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span>
+<span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline">__</span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span>
+<span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline">__</span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span>
+<span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline">__</span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></li>
+
+<li>Stimmabgabe:
+<span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline">__</span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></li>
+
+<li>Aufgaben:
+<span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline">_</span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></li>
+</ul>
+
+<blockquote>
+<p>
+<span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline">__</span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span>
+</p>
+
+<p>
+<span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline">__</span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span>
+</p>
+</blockquote>
+
+<ol class="org-ol">
+<li><blockquote>
+<p>
+<b>Bundesrat (&#x2026;&#x2026;&#x2026;&#x2026;&#x2026;&#x2026;&#x2026;&#x2026;&#x2026;&#x2026;&#x2026;&#x2026;&#x2026;&#x2026;&#x2026;)</b>
+</p>
+</blockquote></li>
+
+<li>Abgeordnete <span class="underline"><span class="underline"><span class="underline"><span class="underline">_</span></span></span></span></li>
+
+<li>Legislaturperiode:
+<span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline">__</span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span>
+<span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline">_</span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></li>
+
+<li>Mandatsverteilung
+<span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline">__</span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></li>
+
+<li>Aufgaben: <span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline">__</span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></li>
+</ol>
+
+<blockquote>
+<p>
+<span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline">_</span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span>
+</p>
+
+<p>
+<span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline">_</span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span>
+</p>
+</blockquote>
+
+<ol class="org-ol">
+<li><blockquote>
+<p>
+<b>Bundesversammlung
+(&#x2026;&#x2026;&#x2026;&#x2026;&#x2026;&#x2026;&#x2026;&#x2026;&#x2026;&#x2026;&#x2026;&#x2026;&#x2026;&#x2026;&#x2026;&#x2026;&#x2026;&#x2026;&#x2026;&#x2026;.)</b>
+</p>
+</blockquote></li>
+</ol>
+
+<p>
+Nationalrat und Bundesrat gemeinsam
+</p>
+
+<p>
+Aufgaben:
+<span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline">__</span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span>
+</p>
+
+<blockquote>
+<p>
+<span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline">__</span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span>
+</p>
+
+<p>
+<span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline">__</span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span>
+</p>
+
+<p>
+<span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline">__</span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span>
+</p>
+</blockquote>
+
+<ol class="org-ol">
+<li><blockquote>
+<p>
+<b>Weg eines Gesetzes/Gesetzentstehung</b>
+</p>
+</blockquote></li>
+
+<li>Antrag</li>
+
+<li><blockquote>
+<p>
+<span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline">__</span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span>
+</p>
+</blockquote></li>
+
+<li><blockquote>
+<p>
+<span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline">__</span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span>
+</p>
+</blockquote></li>
+
+<li><blockquote>
+<p>
+<span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline">__</span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span>
+</p>
+</blockquote></li>
+
+<li><blockquote>
+<p>
+<span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline">__</span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span>
+</p>
+</blockquote></li>
+
+<li>Bearbeitung: 3 Lesungen im Plenum, wobei</li>
+</ol>
+
+<p>
+die 1.Lesung <span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline">__</span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span>
+</p>
+
+<blockquote>
+<p>
+die 2. Lesung:
+<span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline">_</span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span>
+</p>
+
+<p>
+die 3. Lesung:
+<span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline">_</span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span>
+</p>
+</blockquote>
+
+<ol class="org-ol">
+<li>Abstimmung:</li>
+
+<li><blockquote>
+<p>
+Einfaches Bundesgesetz:
+<span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline">_</span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span>
+</p>
+</blockquote></li>
+
+<li><blockquote>
+<p>
+Bundesverfassungsgesetz: <span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline">_</span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span>
+</p>
+</blockquote></li>
+
+<li><blockquote>
+<p>
+Beharrungsbeschluss: <span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline">_</span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span>
+</p>
+</blockquote></li>
+
+<li>Mitwirkung des BR:
+<span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline">__</span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span>
+<span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline">_</span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></li>
+
+<li>Beurkundung durch den Bundespräsidenten:
+<span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline">__</span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span>
+<span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline">__</span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></li>
+
+<li>Gegenzeichnung durch den Bundeskanzler</li>
+
+<li>Kundmachung im Bundesgesetzblatt
+
+<ol class="org-ol">
+<li><blockquote>
+<p>
+<b>Landesgesetzgebung</b>
+</p>
+</blockquote></li>
+</ol></li>
+</ol>
+
+<p>
+<b><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline">__</span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></b>
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgaa05bfb" class="outline-2">
+<h2 id="orgaa05bfb"><span class="section-number-2">7</span> <b>Verwaltung</b></h2>
+<div class="outline-text-2" id="text-7">
+<p>
+Verwaltung ist die Übertragung von Aufgaben aus der Bundes- und
+Landesverfassung, sowie der Bundes- und Landesgesetze an staatliche
+Organe und Behörden. Man unterscheidet
+</p>
+
+<ul class="org-ul">
+<li>Staatliche Verwaltung: <span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline">__</span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></li>
+
+<li>Selbstverwaltung: <span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline">__</span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></li>
+</ul>
+
+<p>
+<b>Oberste Verwaltungsorgane:</b>
+</p>
+
+<ul class="org-ul">
+<li><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline">__</span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></li>
+
+<li><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline">__</span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></li>
+
+<li><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline">__</span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></li>
+</ul>
+
+<p>
+<b>Bundespräsident (&#x2026;&#x2026;&#x2026;&#x2026;&#x2026;&#x2026;&#x2026;&#x2026;&#x2026;&#x2026;&#x2026;&#x2026;&#x2026;&#x2026;&#x2026;&#x2026;&#x2026;):</b>
+</p>
+
+<ul class="org-ul">
+<li>Die Funktionsperiode dauert <span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline">__</span></span></span></span></span></span></span>. Eine einmalige
+Wiederwahl ist möglich.</li>
+
+<li>Er wird vom Volk unmittelbar und direkt gewählt. Gibt es unter
+mehreren Bewerbern keine absolute Mehrheit, so findet eine Stichwahl
+zwischen den zwei stimmenstärksten statt.</li>
+
+<li>Aktives Wahlrecht: <span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline">_</span></span></span></span></span></span></span></span> Passives Wahlrecht:
+<span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline">_</span></span></span></span></span></span></span></span></span></span></span></span></li>
+
+<li>Angelobung des Bundespräsidenten erfolgt durch die
+<span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline">__</span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></li>
+
+<li>Aufgaben als Staatoberhaupt:</li>
+</ul>
+
+<blockquote>
+<p>
+<span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline">_</span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span>
+</p>
+
+<p>
+<span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline">_</span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span>
+</p>
+
+<p>
+<span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline">_</span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span>
+</p>
+
+<p>
+<span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline">_</span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span>
+</p>
+</blockquote>
+</div>
+</div>
+
+<div id="outline-container-org58ce120" class="outline-2">
+<h2 id="org58ce120"><span class="section-number-2">8</span> <b>Gerichtsbarkeit S.226</b></h2>
+<div class="outline-text-2" id="text-8">
+<p>
+Die Gerichtsbarkeit ist ausschließlich
+<span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline">__</span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span>. Die Justiz ist in allen Instanzen
+von der Verwaltung getrennt.
+</p>
+
+<p>
+Die <b>Gerichte</b> sind aufgrund der Gesetze eingerichtete staatliche
+Institutionen, die durch unabhängige, unabsetzbare, unversetzbare,
+unparteiliche und nur an die Rechtsordnung gebundene Richter über
+zivilrechtliche Ansprüche und Verpflichtungen sowie über strafrechtliche
+Anklagen nach einem förmlichen Verfahren entscheiden.
+</p>
+
+<ol class="org-ol">
+<li><blockquote>
+<p>
+<b>Zuständigkeit der Gerichte (S. 236)</b>
+</p>
+</blockquote></li>
+</ol>
+
+<p>
+<b>Gerichte</b>
+</p>
+
+<p>
+<b>Ordentliche Gerichte Außerordentliche Gerichte</b>
+</p>
+
+<p>
+<b>Zivilgerichte Strafgerichte des Privatrechts des öffentlichen Rechts</b>
+</p>
+
+<p>
+Außerstreitverfahren Schiedsgerichte VfGH (prüft Gesetze)
+</p>
+
+<p>
+Streitverfahren Kartellgerichte VwGH (prüft die Verwatung)
+</p>
+
+<p>
+Bundes- und LandesVwGH
+</p>
+
+<ol class="org-ol">
+<li><blockquote>
+<p>
+<b>Stellung im Verfahren (S. 237)</b>
+</p>
+</blockquote></li>
+</ol>
+
+<blockquote>
+<p>
+<span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline">__</span></span></span></span></span></span></span></span></span></span></span></span></span></span></span>
+</p>
+
+<p>
+<span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline">__</span></span></span></span></span></span></span></span></span></span></span></span></span></span></span>
+</p>
+
+<p>
+<span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline">__</span></span></span></span></span></span></span></span></span></span></span></span></span></span></span>
+</p>
+
+<p>
+<span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline">__</span></span></span></span></span></span></span></span></span></span></span></span></span></span></span>
+</p>
+</blockquote>
+
+<p>
+<b>_______________________________________<sub>(Rechtsmittelverfahren)</sub>:</b> Die
+Parteien können die Entscheidung eines Gerichts durch ein höheres
+Gericht (= nächste Instanz) überprüfen lassen.
+</p>
+
+<ol class="org-ol">
+<li><blockquote>
+<p>
+<b>Die Person des Richters -&gt; Richterliche Garanten (S. 237)</b>
+</p>
+</blockquote></li>
+
+<li><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline">_</span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></li>
+
+<li><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline">_</span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></li>
+
+<li><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline">_</span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></li>
+
+<li><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline">_</span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></li>
+</ol>
+
+<p>
+<b>Laienrichter:</b> haben richterliche Funktionen bei handels-, arbeits- und
+sozialrechtlichen Verfahren. Im Strafgericht heißen sie Schöffen oder
+Geschworene:
+</p>
+
+<p>
+<b>Geschworene</b> entscheiden über mit schweren Strafen bedrohte Verbrechen
+</p>
+
+<p>
+<b>Staatsanwaltschaft:</b> Die Staatsanwaltschaften sind von den Gerichten
+getrennte Organe der Gerichtsbarkeit, die die öffentlichen Interessen in
+der Strafpflege wahrnehmen: Anklageerhebung und &#x2013;vertretung im
+Strafprozess.
+</p>
+
+<p>
+<b>Notar:</b> beglaubigt und beurkundet Rechtsgeschäfte und führen im Auftrag
+vom Gericht Verlassenschaftsverfahren durch.
+</p>
+
+<ol class="org-ol">
+<li><blockquote>
+<p>
+<b>Arten der Gerichtsbarkeit</b>
+</p>
+</blockquote></li>
+</ol>
+
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left"><b>Strafgerichtsbarkeit</b></th>
+<th scope="col" class="org-left"><b>Zivilgerichtsbarkeit</b></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left">Hat die Aufgabe, den staatlichen Strafanspruch durchzusetzen</td>
+<td class="org-left">Dient der Durchsetzung privatrechtlicher Ansprüche</td>
+</tr>
+
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline">_</span></span></span></span></span></span> (Grundsatz der öffentl. Anklage): Der Prozess wird von Amts wegen eingeleitet</td>
+<td class="org-left"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline">_</span></span></span></span></span></span></span>: Die Parteien bestimmen über Einleitung, Gegenstand und Ende des Verfahrens</td>
+</tr>
+
+<tr>
+<td class="org-left">Ankläger ist der Staat, vertreten durch den Staatsanwalt. Der Angeklagte wird durch einen Verteidiger vertreten</td>
+<td class="org-left">Kläger klagt Beklagten. Beide können sich durch einen Rechtanwalt vertreten lassen.</td>
+</tr>
+
+<tr>
+<td class="org-left">Verurteilung mit Straffolgen oder Freispruch</td>
+<td class="org-left">Urteil auf Leistung, Feststellung oder Änderung eines Rechts</td>
+</tr>
+</tbody>
+</table>
+
+<p>
+zB Schwere Körperverletzung: Der Täter wird im Strafprozess zu einer
+Strafe verurteilt. Im anschließenden Zivilverfahren klagt das Opfer auf
+Schadenersatz.
+</p>
+
+<p>
+Im <b>Außerstreitverfahren</b> gibt es nur einen Antragsteller und keinen
+Kläger und Beklagten. Diese Verfahren wickeln Rechtspfleger unter
+Leitung eines Richters ab. Beispiele:
+</p>
+
+<p>
+<span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline">_</span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span>
+<span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline">__</span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span>
+</p>
+
+<p>
+<span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline">_</span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span>&#x2026;.________________________________________
+</p>
+
+<p>
+<span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline">_</span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span>
+<span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline">__</span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span>
+</p>
+
+<p>
+<b>Anwaltspflicht und Verfahrenshilfe S.240</b>
+</p>
+
+<p>
+Anwaltspflicht besteht, vor dem Bezirksgericht, wenn der Streitwert über
+5.000,- € beträgt, vor dem Landesgericht und im Rechtsmittelverfahren
+</p>
+
+<p>
+Mittellose Parteien können Verfahrenshilfe beantragen und diese umfasst
+die Gerichtsgebühren, Barauslagen für Sachverständige und die eigenen
+Anwaltskosten.
+</p>
+
+<ol class="org-ol">
+<li><blockquote>
+<p>
+<b>Gerichtsorgane und Zuständigkeit S. 239</b>
+</p>
+</blockquote></li>
+
+<li>Sachliche Zuständigkeit</li>
+
+<li><blockquote>
+<p>
+Bezirksgerichte sind zuständig
+</p>
+</blockquote></li>
+</ol>
+
+<blockquote>
+<ul class="org-ul">
+<li>bei zivilrechtlichen Verfahren bis zu einer Wertgrenze von 15.000,-</li>
+</ul>
+<p>
+€
+</p>
+
+<ul class="org-ul">
+<li>bei Miet- und Pachtverträgen</li>
+
+<li>bei Ehe- und Familienangelegenheiten</li>
+</ul>
+</blockquote>
+
+<ul class="org-ul">
+<li><blockquote>
+<p>
+Landesgerichte sind zuständig
+</p>
+</blockquote></li>
+</ul>
+
+<blockquote>
+<ul class="org-ul">
+<li>bei einem Streitwert über 15.000,- €</li>
+
+<li>Handelsgericht</li>
+
+<li>Arbeits- und Sozialgericht</li>
+</ul>
+</blockquote>
+
+<ul class="org-ul">
+<li>Örtliche Zuständigkeit: Sprengel in dem der Beklagte den
+Wohnsitz/Firmensitz hat.
+
+<ol class="org-ol">
+<li><blockquote>
+<p>
+<b>Verfahrensgrundsätze im Rahmen eines Gerichtsverfahrens (S.
+285):</b>
+</p>
+</blockquote></li>
+</ol></li>
+
+<li>Öffentlichkeit</li>
+
+<li>Mündlichkeit</li>
+
+<li>Laienbeteiligung durch Laienrichter, Schöffen oder Geschworene</li>
+
+<li>Waffengleichheit: beide Parteien kämpfen vor Gericht mit den gleichen
+Beweismitteln („Waffen“)</li>
+
+<li>Unmittelbarkeit</li>
+
+<li>Freie Beweiswürdigung</li>
+
+<li>Überprüfbarkeit der Entscheidung: Instanzenzug
+
+<ol class="org-ol">
+<li><blockquote>
+<p>
+<b>Exekutionsrecht S. 247</b>
+</p>
+</blockquote></li>
+</ol></li>
+</ul>
+
+<p>
+Die Exekution oder Zwangsvollstreckung dient der Durchsetzung von
+Ansprüchen, deren Richtigkeit das Gericht oder eine Verwaltungsbehörde
+festgestellt hat.
+</p>
+
+<p>
+Die betreibende Partei ist der Gläubiger und die verpflichtete Partei
+ist der Schuldner.
+</p>
+
+<p>
+<b>Exekutionsarten:</b>
+</p>
+
+<p>
+Zur Einbringung von <b>Geldforderungen</b> kann folgendes der Exekution
+zugeführt werden:
+</p>
+
+<ul class="org-ul">
+<li><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline">__</span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></li>
+
+<li><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline">__</span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></li>
+
+<li><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline">__</span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></li>
+</ul>
+
+<p>
+Schuldet der Verpflichtete eine <b>Handlung oder Unterlassung</b>, so kann er
+durch Geld- oder sogar Haftstrafen dazu gezwungen werden.
+</p>
+
+<p>
+<b>Grundsätze des Exekutionsverfahrens:</b>
+</p>
+
+<ul class="org-ul">
+<li><b>Rangprinzip</b>:
+<span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline">_</span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span>
+<span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline">_</span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></li>
+
+<li><b>Schuldnerschutz:</b></li>
+
+<li><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline">__</span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></li>
+
+<li><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline">__</span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span>
+<span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline">__</span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span>
+<span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline">__</span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span>
+<span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline">__</span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></li>
+
+<li><b>Öffentlichkeit:</b>
+<span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline">_</span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span>
+<span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline">_</span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></li>
+</ul>
+
+<p>
+<b>Ablauf eines Exekutionsverfahrens S. 248</b>
+</p>
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="author">Author: Felix Perktold</p>
+<p class="date">Created: 2020-10-08 Thu 11:48</p>
+<p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
+</div>
+</body>
+</html>

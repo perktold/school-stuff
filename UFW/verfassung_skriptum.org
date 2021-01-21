@@ -1,0 +1,782 @@
+*I Das österreichische Rechtssystem und die Bundesverfassung*
+
+Das *Rechtssystem* regelt das Zusammenleben der Menschen in der
+Gemeinschaft. Diese Regeln werden in Form von Gesetzen beschlossen,
+niedergeschrieben und veröffentlicht.
+
+- Für wen gelten die Gesetze? Für jede PErson auf
+  Staatsgebiet[[file:media/image1.png]]
+
+- Muss man Gesetze gelesen haben, dass sie für einen gelten? Nein
+
+- Wo kann man sie nachlesen? www.ris.bka.gv.at
+
+Die *Verfassung* ist die oberste Rechtsgrundlage innerhalb eines
+Staates. Sie enthält die grundsätzlichen Regelungen über die Form des
+Staates und die Form der Beziehungen zwischen Staat und Bürger. Sie
+stellt somit die Grundlage der staatlichen Ordnung dar und kann nur
+durch Verfassungsgesetze aufgehoben, geändert oder ergänzt werden.
+
+Die österreichische Verfassung in der heutigen Form stammt aus 1920/1929
+von Hans Kelsen.
+
+*Staat*
+
+* Staatsvolk Staatsgewalt Staatsgebiet
+   :PROPERTIES:
+   :CUSTOM_ID: staatsvolk-staatsgewalt-staatsgebiet
+   :END:
+
+| *Gesetzgebung*  | *Verwaltung*       | *Gerichtsbarkeit (ludikative)*             |                             |
+|                 |                    |                                            |                             |
+| *(Legislative)* | *(Exekutive)*      |                                            |                             |
+|-----------------+--------------------+--------------------------------------------+-----------------------------|
+| *Bundes-*       | *Landes-*          | Ausführung der Gesetze                     | Rechtsprechung              |
+|                 |                    |                                            |                             |
+| *Gesetzgebung*  | *Gesetzgebung*     |                                            |                             |
+| Gilt            | Gilt               | Zuständigkeit:                             | weisungsfreie               |
+|                 |                    |                                            |                             |
+| in Österrreich  | im jeweiligen Land | Bundes-/Landesregierung                    | zuständigkeit-weisungsfreie |
+|                 |                    |                                            |                             |
+| Zuständigkeit:  | Zuständigkeit:     | unterstützt durch weisungsgebundene Beamte | Richter                     |
+|                 |                    |                                            |                             |
+| Nationalrat     | Landtag            |                                            |                             |
+
+Der *Staat* ist ein Zusammenschluss von Menschen mit Herrschaftsgewalt
+und gliedert sich in die 3 Elemente:
+
+- *Staatsvolk (National people):* Das Staatsvolk im engeren Sinne bilden
+  die Staatsbürger. Zum Staatsvolk im weiteren Sinne zählen auch Fremde
+  (Ausländer, Staatenlose), die sich auf dem Staatsgebiet aufhalten.
+
+- *Staatsgebiet (National Territory):* Unter Staatsgebiet versteht man
+  jenes Gebiet, das der jeweiligen Staatsgewalt unterworfen ist. Dazu
+  zählen:
+
+- 
+
+  #+BEGIN_QUOTE
+    Erdoberfläche: innerhalb der Grenzen sowie der darüber befindliche
+    Luftraum und das Erdinnere.
+  #+END_QUOTE
+
+- 
+
+  #+BEGIN_QUOTE
+    Küstenmeer: bei an Meer grenzenden Staaten (12-Meilen-Zone = ca.
+    22km)
+  #+END_QUOTE
+
+- 
+
+  #+BEGIN_QUOTE
+    Botschaften: Exterritorialität
+  #+END_QUOTE
+
+#+BEGIN_QUOTE
+  Der Weltraum und das freie Meer gehören keinem Staat und daher allen
+  Staaten zur Benützung freigegeben.
+#+END_QUOTE
+
+- *Staatsgewalt (...........................................)*: Die
+  Staatsgewalt ist eine bestimmte Ordnung des Staates. Diese ist in der
+  Verfassung geregelt und gliedert sich in
+
+- 
+
+  #+BEGIN_QUOTE
+    _______________________________
+    (........................................)
+  #+END_QUOTE
+
+- 
+
+  #+BEGIN_QUOTE
+    _______________________________
+    (........................................)
+  #+END_QUOTE
+
+- 
+
+  #+BEGIN_QUOTE
+    _______________________________
+    (........................................)
+
+- 
+
+    *Prinzip der Gewaltenteilung*: Die 3 Staatsgewalten sollen
+    voneinander unabhängig sein und sich gegenseitig kontrollieren.
+    Machtkonzentrationen sollen verhindert werden. Justiz und Verwaltung
+    sind bundesverfassungsrechtlich in allen Instanzen getrennt.
+
+*Die Rolle der Medien:* Eine nicht unwesentliche Rolle bei der
+Verteilung der staatlichen Macht spielen die *Medien*, von vielen
+deshalb als *4. Staatsgewalt* bezeichnet, obwohl sie definitionsgemäß
+natürlich keine Gewalt, sondern allenfalls Einfluss haben. Ihr
+faktischer Einfluss darf aber nicht unterschätzt werden, sind doch die
+Parteien insb. bei der Wahlwerbung maßgeblich von den Medien abhängig.
+Umgekehrt wird auch immer wieder versucht, die Medien wirtschaftlich
+unter Kontrolle zu bringen und damit den freien Journalismus
+einzuschränken. Welche Rolle spielen dabei neue Netzwerke wie Facebook
+oder Twitter?
+
+Rechtlich gesehen ist der Staat eine
+juristische Person, die durch ihre
+verfassungsmäßigen Organe handlungsfähig ist.
+
+Die staatliche *Souveränität* bedeutet, dass der Staat seine
+Angelegenheiten im Inneren und seine Beziehungen nach außen selbst
+regelt. Kein fremder Staat darf Herrschaftsrechte ausüben. Dies ist
+jedoch durch die EU abgeschwächt.
+
+Die Beziehungen zwischen den verschiedenen Staaten untereinander regelt
+das *Völkerrecht.* S.4.
+
+* *Stufenbau der Rechtsordnung (S.11)*
+
+Grundprinzipien der Verfassung / Fundamental Principles 
+EU Recht / EU Law 
+Bundesverfassungsgesetze / Constitutional law 
+Bundesgesetze / federal law 
+Verordnung / Legal ordinance 
+
+
+Jede Rechtsnorm darf den darüber stehenden Rechtsnormen nicht
+widersprechen.
+
+
+Die *Grundprinzipien der Bundesverfassung* können nur durch Volksabstimmungen geändert werden
+
+Das *EU-Recht* wird vom EU-Parlament beschlossen und hat *Anwendungsvorrang* Es ist eigentlich
+nicht übergeordnet, allerdings dürfen die innerstaatlichen Maßnahmen dem
+EU-Recht nicht widersprechen. Es wird vom EU-Parlament beschlossen.
+
+*Bundesverfassungsgesetze*
+Wird vom Nationalrat mit 66% Mehrheit beschlossen, wobei die Hälfte der Abgeordneten anwesend sein muss
+
+*Bundesgesetze*
+Wird vom Nationalrat mit 50% Mehrheit beschlossen, wobei 33% der Abgeordneten anwesend sein muss
+
+*Verordnungen*
+Werden innerhalb von wirkungsbereich erlassen
+
+*Grundprinzipien der österreichischen Bundesverfassung*
+
+Österreich = parlamentarische, mittelbare demokratische Republik
+
+- *Demokratisches Prinzip (Democrativ principle) Die
+  *Regierungsform* gibt Auskunft darüber, auf welche Weise und durch wen
+  ein Staat regiert wird, und wie die regierenden Organe an die
+  Regierungsposition gelangen. Österreich ist eine Demokratie.
+  (Gegensatz: Diktatur)
+
+  - Volk ist Staatsgewalt
+
+  - alle Bürger sind vor dem Staat gleich
+
+  - das Volk hat das Recht der politischen Mitbestimmung => freie Wahlen
+
+  - Grund und Freiheitsrechte (Liberales prinzip)
+
+- *Republikanisches Prinzip
+  (Republican principle) Die *Staatsform* gibt
+  Auskunft darüber, wer an der Spitze des Staates steht, und wie er dort
+  hinkommt. [[file:media/image2.png]]
+
+  Österreich ist eine Republik und an der Spitze steht ein *auf
+  bestimmte Zeit vom Staatsvolk gewähltes Staatsoberhaupt
+  (Bundespräsident).* Er ist *dem Volk* gegenüber politisch und
+  rechtlich *verantwortlich*, und *kann* daher vorzeitig *abgesetzt
+  werden*. (Gegensatz; Monarchie: an der Spitze steht Monarch,der in der
+  Regel durch Erbfolge auf Lebenszeit, ohne Zutun des Staatsvolkes
+  regiert, er ist dem Volk gegenüber nicht verantwortlich, er ist daher
+  unabsetzbar.)
+
+
+- *Bundesstaatliches Prinzip
+  (Federal principle):*
+
+- Die Ausübung der Staatsgewalt ist zwischen Bund und Ländern aufgeteilt
+
+- die Länder haben eigene Landesverfassungen
+
+- Mitwirkung der Bundesländer an der Bundesgesetzgebung durch den Bundesrat
+
+
+- *Rechtsstaatliches Prinzip
+  (Legality principle):*
+
+- Die Verfassung ist die Grundlage auf der alle Gesetze aufgebaut sind
+
+- Dem einzelnen ist der Schutz vor Staatlicher willkür garantiert
+
+- Die Staatsgewalt ist durch die Bindung an das Recht beschränkt
+
+- Kontrolle der Staatlichen organe und ihrer Tätigkeit
+
+
+    *Legalitätsprinzip* Die staatliche Verwaltung darf nur aufgrund der
+    Gesetze ausgeübt werden, es darf keine Willkür geben. (im Gegensatz
+    zu einem Polizeistaat)
+
+* *Grund und Freiheitsrechte*
+
+Die Grund- u. Freiheitsrechte haben das Ziel für den einzelnen Bürger
+einen Freiheitsbereich zu schaffen und den Schutz vor Eingriffen des
+Staates in die höchst persönliche Privatsphäre durch Gesetzgebung oder
+Vollziehung zu gewährleisten (= *liberales Prinzip*)
+
+- Gleichheit vor dem Gesetz
+
+- Glaubensfreiheit
+
+- Meinungsfreiheit und Pressefreiheit
+
+- Unverletzlichkeit des Hausrechtes
+  (hausdurchsuchung nur mit durchsuchungsbefehl / gefahr im verzug)
+
+- Schutz der persönlichen Freiheit
+  (keine festnahme ohne richterlichen befehl)
+
+- Unverletzlichkeit des Eigentums
+  (enteignungen nur in gesetzlich geregelten fällen)
+
+- Anspruch auf den gesetzlich zuständigen Richter, ein ordentliches
+  Gerichtsverfahren, Verbot von Folter
+
+- Vereins- u. Versammlungsfreiheit
+
+
+- Recht auf Datenschutz
+  geheimhaltung personenbezogener daten
+
+* *Kontrolle der Staatsgewalt*
+
+- Verfassungsgerichtshof:
+  _________________________________________________________
+
+- Verwaltungsgerichtshof:
+  Kontrolle der Verwaltung
+
+- Volksanwaltschaft:
+
+
+- Rechnungshof:
+  untersteht direkt dem nationalrat und prüft die finanzen von Bund, ländern, gemeinden und deren beteiligungen an unternehmen
+
+- Kontrolle der Gerichtsbarkeit
+  obeste instanz: oberster Gerichtshof
+
+* *Arten des Rechts*
+
+*Generelles -- individuelles Recht*
+
+- *Generelles* Recht
+Gesetze
+
+*Materielles -- Formelles Recht*
+- *Materielles* Recht
+Regelt das Verhalten vom Menschen in inhaltlicher Beziehung, zB Diebstahl
+
+- *Formelles* Recht
+Heißt Verfahrensrecht, das heißt es geht um die Art und den Weg der Rechtsdurchsetzung, zB den Strafprozess, in dem der Diebstahl bestraft wird
+
+*Zwingendes --Nachgiebiges Recht (s. 5)*
+
+- *Zwingendes* (cognitives) Recht
+Ist undabdingbar und kann durch die am Rechtsverhältnis beteiligten nicht verändert werden 
+zB man kann keine Ehe auf Zeit schließen
+
+- *Nachgiebiges* (dispositives) Recht ist abdingbar und kann von den beteiligten durch eine Abmachung geändert werden,
+zB Zahlungsart beim Kaufvertrag
+
+*spezielles - allgemeines Gesetz (Lex specialis vs lex generalis)*
+Ein Allgemeines Gesetz hat nur insofern Gültigkeit, als es kein spezielles Gesetz gibt, zb ABGB (Allgemeines Bürgerliches Gesetzbuch)
+spezielle gesetze greifen immer, zB E-Commerze Gesetz
+
+*Demonstrative (beispielhaft)-- taxative (allumfassend) Aufzählungen*
+Demonstrative Aufzählungen sind Beispielhaft und werden durch "zB", "insbesondere", "unter anderem", etc. eingeleitet
+Taxative Aufzählungen sind allumfassend (exhaustive) und dürfen nicht ergänzt werden. Fehlen die Einleitungsworte einer Demonstrativen Aufzählung, ist von einer taxativen auszugehen
+
+* *Gesetzgebung*
+
+** *Wahlrechtsgrundsätze :*
+
+- Allgemeines Wahlrecht (Universal suffrage): 
+alle männlichen und weiblichen staatsbürger dürfen, sofern sie das wahlalter erreicht haben und kein wahlausschlussgrund vorliegt, 
+
+  + Aktives Wahlrecht:
+  Vollendung des 16. Lebensjahres am Tag der Wahl
+
+  + Passives Wahlrecht:
+  Vollendung des 18. Lebensjahres am Tag der Wahl
+
+- Gleiches Wahlrecht (equal suffrage):
+Unabhängig von den persönlichen Umständen des Wählers
+
+- Direktes Wahlrecht (direct suffrage):
+Es wird unmittelbar ein Kandidat oder eine Partei gewählt
+
+- Geheimes Wahlrecht (secret ballout):
+Wahlkabinen, Wahrlurnen, Blickdichte Kuverts, Wahlsprengel mit entsprechender Größe
+
+- Freies Wahlrecht (free suffrage):
+Stimmabgabe erfolgt ohne Einflussnahme. Es darf keine Konsequenzen für die Wahl geben aufgrund der politischen Überzeug und damit der Stimmabgabe geben.
+
+- Persönliches Wahlrecht (personal suffrage):
+Die Wahl muss persönlich ausgeübt werden, es kann keine Vollmacht erteilt werden
+
+*Briefwahl (postal vote):
+Gefährde die Wahlrechtsgrundsätze, da nicht gewährleistet ist, wer unter welchen Bedingungen abstimmt
+
+** *Wahlverfahren (voting system):*
+
+- Verhältniswahlrecht (proportional vote system)
+Die Aufteilung der Mandate auf die einzelnen parteien erfolgt im Verhältnis zu den abgegebenen Stimmen
+
+- Mehrheitswahlrecht (majority vote system)
+Wer mehr als die Hälfte der gültig abgegebenen Stimmen eines Wahlkreises auf sich vereint erhält alle Stimmen dieses Wahlkreises
+
+** *Instrumente der direkten Demokratie:*
+
+- Volksabstimmung:
+Entscheidung des Volkes über das Inkrafttreten eines Gesetzes
+zB Zwentendorf, EU-Beitritt
+
+- Volksbegehren:
+Antrag des Volkes auf das Erlassen eines Gesetzes
+Es müssen mindestens 100.000 Stimmen vorliegen
+
+- Volksbefragung:
+Befragung des Volkes über aktuelle Themen in der Politik, nur auf Beschluss des Nationalrates oder der Regierung
+zB Allgemeine Wehrpflicht
+
+
+** *Nationalrat (National Council):*
+
+- Abgeordnete/Mandatare: 183
+
+- Legislaturperiode von 5 Jahren, Verkürzung des Zeitraums
+  durch:
+
+- Selbstauflösung des Nationalrates
+
+- Auflösung durch den Bundespräsidenten auf Vorschlag der Bundesregierung
+
+- Automatische Auflösung, wenn auf Veranlassung des Nationalrates die Bundesversammlung eine Volksabstimmung zur Absetzung des Bundespräsidenten verlangt hat und das Volk diese Absetzung ablehnt.
+
+*** Immunität der Abgeordneten:
+
+- Berufliche Immunität
+Rede und Abstimmungsfreiheit, Abgeordnete müssen sich nur vor dem Nationalrat verantworten
+
+- Außerberufliche Immunität
+Schützt vor behördlichen Verfolgung auf grunde einer Straftat
+Der Nationalrat kann die Außerberufliche Immuntät aufheben
+
+- freies Mandat
+Laut Verfassung können die Abgeordneten ihre Entscheidungen unabhängig vom Auftrag des Wählers und der Meinung ihrer Partei treffen
+Das ist die Bindung eines Abgeordneten an die Vorgaben seiner Partei
+
+- Stimmabgabe:
+
+
+- Aufgaben:
+Bearbeitung und beschlussfassung von Bundesgesetzen 
+Kontrolle der Bundesregierung
+
+
+** *Bundesrat (Federal Council)*
+
+- Abgeordnete 62-65
+
+- Legislaturperiode:
+gibts keine, die Zusammensetzung ändert sich jeweils nach den Landtagswahlen in den einzelnen Bundesländern
+
+- Mandatsverteilung
+erfolgt nach den Parteien in den jeweiligen Landtagen
+
+- Aufgaben: __________________________________________________________
+
+#+BEGIN_QUOTE
+  _________________________________________________________
+
+  _________________________________________________________
+#+END_QUOTE
+
+1. 
+
+   #+BEGIN_QUOTE
+     *Bundesversammlung
+     (.............................................................)*
+   #+END_QUOTE
+
+Nationalrat und Bundesrat gemeinsam
+
+Aufgaben:
+________________________________________________________________
+
+#+BEGIN_QUOTE
+  ________________________________________________________________
+
+  ________________________________________________________________
+
+  ________________________________________________________________
+#+END_QUOTE
+
+2. 
+
+   #+BEGIN_QUOTE
+     *Weg eines Gesetzes/Gesetzentstehung*
+   #+END_QUOTE
+
+1. Antrag
+
+- 
+
+  #+BEGIN_QUOTE
+    ____________________________________
+  #+END_QUOTE
+
+- 
+
+  #+BEGIN_QUOTE
+    ____________________________________
+  #+END_QUOTE
+
+- 
+
+  #+BEGIN_QUOTE
+    ____________________________________
+  #+END_QUOTE
+
+- 
+
+  #+BEGIN_QUOTE
+    ____________________________________
+  #+END_QUOTE
+
+2. Bearbeitung: 3 Lesungen im Plenum, wobei
+
+die 1.Lesung __________________________________________________________
+
+#+BEGIN_QUOTE
+  die 2. Lesung:
+  _________________________________________________________
+
+  die 3. Lesung:
+  _________________________________________________________
+#+END_QUOTE
+
+3. Abstimmung:
+
+- 
+
+  #+BEGIN_QUOTE
+    Einfaches Bundesgesetz:
+    _____________________________________________
+  #+END_QUOTE
+
+- 
+
+  #+BEGIN_QUOTE
+    Bundesverfassungsgesetz: ___________________________________________
+  #+END_QUOTE
+
+- 
+
+  #+BEGIN_QUOTE
+    Beharrungsbeschluss: _______________________________________________
+  #+END_QUOTE
+
+4. Mitwirkung des BR:
+   ______________________________________________________________
+   _____________________________________________________________________________
+
+5. Beurkundung durch den Bundespräsidenten:
+   __________________________________________
+   ______________________________________________________________________________
+
+6. Gegenzeichnung durch den Bundeskanzler
+
+7. Kundmachung im Bundesgesetzblatt
+
+   1. 
+
+      #+BEGIN_QUOTE
+        *Landesgesetzgebung*
+      #+END_QUOTE
+
+*__________________________________________________________________________________________________________________________________________________________________*
+
+* *Verwaltung*
+
+Verwaltung ist die Übertragung von Aufgaben aus der Bundes- und
+Landesverfassung, sowie der Bundes- und Landesgesetze an staatliche
+Organe und Behörden. Man unterscheidet
+
+- Staatliche Verwaltung: ____________________________________________
+
+- Selbstverwaltung: ________________________________________________
+
+*Oberste Verwaltungsorgane:*
+
+- ________________________________________________________________________
+
+- ________________________________________________________________________
+
+- ________________________________________________________________________
+
+*Bundespräsident (...................................................):*
+
+- Die Funktionsperiode dauert ________________. Eine einmalige
+  Wiederwahl ist möglich.
+
+- Er wird vom Volk unmittelbar und direkt gewählt. Gibt es unter
+  mehreren Bewerbern keine absolute Mehrheit, so findet eine Stichwahl
+  zwischen den zwei stimmenstärksten statt.
+
+- Aktives Wahlrecht: _________________ Passives Wahlrecht:
+  _________________________
+
+- Angelobung des Bundespräsidenten erfolgt durch die
+  ________________________________
+
+- Aufgaben als Staatoberhaupt:
+
+#+BEGIN_QUOTE
+  _________________________________________________________________
+
+  _________________________________________________________________
+
+  _________________________________________________________________
+
+  _________________________________________________________________
+#+END_QUOTE
+
+* *Gerichtsbarkeit S.226*
+
+Die Gerichtsbarkeit ist ausschließlich
+____________________________________. Die Justiz ist in allen Instanzen
+von der Verwaltung getrennt.
+
+Die *Gerichte* sind aufgrund der Gesetze eingerichtete staatliche
+Institutionen, die durch unabhängige, unabsetzbare, unversetzbare,
+unparteiliche und nur an die Rechtsordnung gebundene Richter über
+zivilrechtliche Ansprüche und Verpflichtungen sowie über strafrechtliche
+Anklagen nach einem förmlichen Verfahren entscheiden.
+
+1. 
+
+   #+BEGIN_QUOTE
+     *Zuständigkeit der Gerichte (S. 236)*
+   #+END_QUOTE
+
+*Gerichte*
+
+*Ordentliche Gerichte Außerordentliche Gerichte*
+
+*Zivilgerichte Strafgerichte des Privatrechts des öffentlichen Rechts*
+
+Außerstreitverfahren Schiedsgerichte VfGH (prüft Gesetze)
+
+Streitverfahren Kartellgerichte VwGH (prüft die Verwatung)
+
+Bundes- und LandesVwGH
+
+2. 
+
+   #+BEGIN_QUOTE
+     *Stellung im Verfahren (S. 237)*
+   #+END_QUOTE
+
+#+BEGIN_QUOTE
+  ________________________________
+
+  ________________________________
+
+  ________________________________
+
+  ________________________________
+#+END_QUOTE
+
+*________________________________________(Rechtsmittelverfahren):* Die
+Parteien können die Entscheidung eines Gerichts durch ein höheres
+Gericht (= nächste Instanz) überprüfen lassen.
+
+3. 
+
+   #+BEGIN_QUOTE
+     *Die Person des Richters -> Richterliche Garanten (S. 237)*
+   #+END_QUOTE
+
+- _________________________________________________________
+
+- _________________________________________________________
+
+- _________________________________________________________
+
+- _________________________________________________________
+
+*Laienrichter:* haben richterliche Funktionen bei handels-, arbeits- und
+sozialrechtlichen Verfahren. Im Strafgericht heißen sie Schöffen oder
+Geschworene:
+
+*Geschworene* entscheiden über mit schweren Strafen bedrohte Verbrechen
+
+*Staatsanwaltschaft:* Die Staatsanwaltschaften sind von den Gerichten
+getrennte Organe der Gerichtsbarkeit, die die öffentlichen Interessen in
+der Strafpflege wahrnehmen: Anklageerhebung und --vertretung im
+Strafprozess.
+
+*Notar:* beglaubigt und beurkundet Rechtsgeschäfte und führen im Auftrag
+vom Gericht Verlassenschaftsverfahren durch.
+
+1. 
+
+   #+BEGIN_QUOTE
+     *Arten der Gerichtsbarkeit*
+   #+END_QUOTE
+
+| *Strafgerichtsbarkeit*                                                                                          | *Zivilgerichtsbarkeit*                                                                      |
+|-----------------------------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------|
+| Hat die Aufgabe, den staatlichen Strafanspruch durchzusetzen                                                    | Dient der Durchsetzung privatrechtlicher Ansprüche                                          |
+|                                                                                                                 |                                                                                             |
+| _____________ (Grundsatz der öffentl. Anklage): Der Prozess wird von Amts wegen eingeleitet                     | _______________: Die Parteien bestimmen über Einleitung, Gegenstand und Ende des Verfahrens |
+| Ankläger ist der Staat, vertreten durch den Staatsanwalt. Der Angeklagte wird durch einen Verteidiger vertreten | Kläger klagt Beklagten. Beide können sich durch einen Rechtanwalt vertreten lassen.         |
+| Verurteilung mit Straffolgen oder Freispruch                                                                    | Urteil auf Leistung, Feststellung oder Änderung eines Rechts                                |
+
+zB Schwere Körperverletzung: Der Täter wird im Strafprozess zu einer
+Strafe verurteilt. Im anschließenden Zivilverfahren klagt das Opfer auf
+Schadenersatz.
+
+Im *Außerstreitverfahren* gibt es nur einen Antragsteller und keinen
+Kläger und Beklagten. Diese Verfahren wickeln Rechtspfleger unter
+Leitung eines Richters ab. Beispiele:
+
+_______________________________________
+________________________________________
+
+_______________________________________....________________________________________
+
+_______________________________________
+________________________________________
+
+*Anwaltspflicht und Verfahrenshilfe S.240*
+
+Anwaltspflicht besteht, vor dem Bezirksgericht, wenn der Streitwert über
+5.000,- € beträgt, vor dem Landesgericht und im Rechtsmittelverfahren
+
+Mittellose Parteien können Verfahrenshilfe beantragen und diese umfasst
+die Gerichtsgebühren, Barauslagen für Sachverständige und die eigenen
+Anwaltskosten.
+
+2. 
+
+   #+BEGIN_QUOTE
+     *Gerichtsorgane und Zuständigkeit S. 239*
+   #+END_QUOTE
+
+- Sachliche Zuständigkeit
+
+- 
+
+  #+BEGIN_QUOTE
+    Bezirksgerichte sind zuständig
+  #+END_QUOTE
+
+#+BEGIN_QUOTE
+  - bei zivilrechtlichen Verfahren bis zu einer Wertgrenze von 15.000,-
+  €
+
+  - bei Miet- und Pachtverträgen
+
+  - bei Ehe- und Familienangelegenheiten
+#+END_QUOTE
+
+- 
+
+  #+BEGIN_QUOTE
+    Landesgerichte sind zuständig
+  #+END_QUOTE
+
+#+BEGIN_QUOTE
+  - bei einem Streitwert über 15.000,- €
+
+  - Handelsgericht
+
+  - Arbeits- und Sozialgericht
+#+END_QUOTE
+
+- Örtliche Zuständigkeit: Sprengel in dem der Beklagte den
+  Wohnsitz/Firmensitz hat.
+
+  1. 
+
+     #+BEGIN_QUOTE
+       *Verfahrensgrundsätze im Rahmen eines Gerichtsverfahrens (S.
+       285):*
+     #+END_QUOTE
+
+- Öffentlichkeit
+
+- Mündlichkeit
+
+- Laienbeteiligung durch Laienrichter, Schöffen oder Geschworene
+
+- Waffengleichheit: beide Parteien kämpfen vor Gericht mit den gleichen
+  Beweismitteln („Waffen“)
+
+- Unmittelbarkeit
+
+- Freie Beweiswürdigung
+
+- Überprüfbarkeit der Entscheidung: Instanzenzug
+
+  1. 
+
+     #+BEGIN_QUOTE
+       *Exekutionsrecht S. 247*
+     #+END_QUOTE
+
+Die Exekution oder Zwangsvollstreckung dient der Durchsetzung von
+Ansprüchen, deren Richtigkeit das Gericht oder eine Verwaltungsbehörde
+festgestellt hat.
+
+Die betreibende Partei ist der Gläubiger und die verpflichtete Partei
+ist der Schuldner.
+
+*Exekutionsarten:*
+
+Zur Einbringung von *Geldforderungen* kann folgendes der Exekution
+zugeführt werden:
+
+- ____________________________________________________
+
+- ____________________________________________________
+
+- ____________________________________________________
+
+Schuldet der Verpflichtete eine *Handlung oder Unterlassung*, so kann er
+durch Geld- oder sogar Haftstrafen dazu gezwungen werden.
+
+*Grundsätze des Exekutionsverfahrens:*
+
+- *Rangprinzip*:
+  ___________________________________________________________
+  _______________________________________________________________________
+
+- *Schuldnerschutz:*
+
+- ______________________________________________________________________
+
+- ____________________________________________________________________________
+  ____________________________________________________________________________
+  ____________________________________________________________________________
+  ____________________________________________________________________________
+
+- *Öffentlichkeit:*
+  _______________________________________________________________
+  ___________________________________________________________________________
+
+*Ablauf eines Exekutionsverfahrens S. 248*

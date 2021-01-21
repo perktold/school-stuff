@@ -71,6 +71,9 @@ Problem: leicht unterschiedlich schnelle uhren in Empfänger und Sender => müss
 
 Zweite Möglichkeit (I²C Bus): eigene Taktleitung zusätzlich zur Datenleitung im Kabel
 
+*** Datensicherheit / Fehlerkorrigierende codes
+Ein einzelner Übertragungsfehler entspricht einem Bit, das zwichen Sender und Empfänger verändert wurde
+
 ** RS232 / UART
 Universal Asynchronous Receive / Transmit
 
@@ -103,3 +106,25 @@ zwischen je zwei Geräten besteht eine [[../OfficeLense/2020_10_08 16_32 Office 
 
 ** Arbitrierung (Kollisionsvermeidung) beim CAN-Bus:
 Grundsätzlich fängt kein Gerät an zu schreiben, während ein anderes Gerät schreibt, sondern wartet das Ende der Nachricht ab. Wenn zwei Geräte zugleich zu schreiben beginnen: 
+* Finite State Machine (FSM)
+Eigenes Programmierprinzip mit folgenden Vorteilen:
+
+- Erweiterbarkeit
+- Graphische Planung und Dokumentation
+
+** Prinzipien zur Finit State Machine:
+1) jeder Zustand ist eine eigene Bubble und wird als eigene Methode programmiert
+2) jeder Übergang zwischen zwei Zuständen ist an eine Bedingung geknüpft => if-statement
+3) Zustand wird in einer Globalen Variable gespeichert
+4) in der loop ist ein switch(zustand) dass die richtige Methode aufgerufen wird.
+** Beispiel: Ampelversion 1
+Amepel an einem Fußgängerübergang, wir programmieren nur die Autoampel, da die Fußgängerampel sowieso gegengleich geschaltet wird.
+
+Die ampel soll 5 Sekunden rot sein und dann für 10 Sekunden auf grün schalten.
+[[../OfficeLense/2020_12_10 16_10 Office Lens (1).jpg][Schema]]
+
+Um festzustellen ob die Zeit abgelaufen ist, müssen wir uns den Startzeitpunkt des jeweiligen Zeitraums merken => dieses Festlegen einer Variable ist eine eigene Bubble
+[[../OfficeLense/2020_12_10 16_10 Office Lens (2).jpg][Schema]] (TODO: rotate this, lol)
+
+** Beispiel: Pakete
+[[../OfficeLense/pakete_bubblediagramm.jpg][Diagramm]]

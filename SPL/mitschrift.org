@@ -1,0 +1,38 @@
+#+HTML_HEAD: <link rel="stylesheet" type="text/css" href="../SWP_Holzmann/style.css" />
+
+* OP-Amp
+** Grundschaltung als Komparator
+Keine Rückkopplung, eine kleine Differenz zwischen U+ und U- wird mit einem großen Verstärkungsfaktor multipliziert, da der resultierende Spannungswert auch bei einer minimalen Differenz bereits größer ist als die Versorgugsspannung gibt es für den Ausgang praktisch nur zwei Mögliche Zustände
+
+wenn U+ > U- → Uaus positiv Versorgungsspannung \\
+wenn U+ < U- → Uaus negative Versorgungsspannung
+
+Den negativen Anschluss der Versorgungsspannung kann man entweder 
++ auf GND legen → Uaus immer >= 0V
++ auf -Vcc (-15V) legen → Uaus kann negativ werden
+
+*** Anwendung:
+Vergleich von zwei Spannungen (zb im A/D Wandler)
+
+** Schaltung mit Gegenkopplung
+Gegenkopplung = Uaus wird auf den invertierenden Eingang (eventuell über einen Wiederstand) Rückgekoppelt
+
+*** Anwendung:
+**** Spannungsfolger:
+eine Anfänglich kleine Differenz zwischen U+ und U- wird durch den OP-Amp zum Verschwinden gebracht:
+
+wenn U+ > U- → Uaus tendiert mit der Zeit richtung positiver Betriebsspannung (U+)
+wenn U+ < U- → Uaus tendiert mit der Zeit richtung negativer Betriebsspannung (U-)
+
+_Bei allen Schaltungen mit Gegenkopplung (Uaus auf U- rückgekoppelt) stellt sich Uaus so ein, dass U+ gleich U-_
+
+_Der +/- Eingänge des OP-Amps haben einen Eingangswiederstand im MΩ Bereich → die Eingangsströme können als 0 angenommen werden_
+
+Beim Spannungsfolger bedeutet dies, dass Spannungsquellen, die nur einen sehr kleinen Strom liefern können mithilfe des Spannungsfolgers auch einen hohen Ausgangsstrom liefern ohne dass sich der Spannungswert ändert
+
+Erinnerung 2. Klasse: ohne Spannungsfolger wird die Klemmenspannung einer realen Spannungsquelle mit hohem Innenwiederstand sehr rasch kleiner wenn mann die Stromstärke erhöht
+
+**** Invertierender Verstärker
+Uaus wird auf U- über Wiederstand rückgekoppelt.
+
+Virtuelle Masse: Uaus stellt sich immer so ein, dass U- auf 0V gehalten wird gehalten wird. → A wird auf 0V gehalten ohne dass eine leitende Verbindung zu GND besteht. Der Unterschied dieser Virtuellen Masse zu einer richtigen GND Verbindung besteht darin, dass kein Strom zu GND fließen kann

@@ -1,0 +1,19 @@
+Muster mit druckknopf 
+Ziel: mit einem Druck auf den Button soll das jeweils nächste Muster eingestellt werden
+
+#+begin_src c
+if(dR(2)) muster = 
+#+end_src
+
+Schalterprellen:
+
+Bei einer steigenden Flanke wird das muster Weitergeschalten aber nur dann, wenn seit der letzten steigenden Flanke mehr als 100ms vergangen sind
+
+Problem bei **
+Beim loslassen des Knopfes entsteht auch eine steigende flanke (=> Schalterprellen) die das muster weiterschaltet.
+
+Lösung: es werden nur steigende Flanken gezählt wenn seit der letzten Flanke mehr als 100ms vergangen sind
+
+Taster anschließen: (Wiederholung 2. Klasse)
+
+Arduino hat einen eingebauten pull-up wiederstand pinMode(2, INTERNAL_PULLUP)
